@@ -2,13 +2,17 @@
 #define SupportCustomYieldInstruction
 #endif
 
+using UnityEngine;
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
+
+using System.Threading;
+using System.Threading.Tasks;
+
 using UniRx.InternalUtil;
 using UniRx.Triggers;
-using UnityEngine;
-using System.Threading;
 
 #if !UniRxLibrary
 using SchedulerUnity = UniRx.Scheduler;
@@ -1164,5 +1168,24 @@ namespace UniRx
             }
         }
 #endif
+        public static IObservable<T> OnMainThread<T>(this IObservable<T> observable)
+        {
+            return observable.ObserveOnMainThread().SubscribeOnMainThread();
+        }
+
+        public static IDisposable SubscribeOnMainThread<T>(this IObservable<T> observable,Action<T> action)
+        {
+            return observable.OnMainThread().Subscribe(action);
+        }
+
+        public static IDisposable ThenOnMainThread<T>(this Task<T> task,Action<T> action)
+        {
+            return task.ToObservable().SubscribeOnMainThread(action);
+        }
+
+        public static IDisposable ThenOnMainThread(this Task task,Action action)
+        {
+            return task.ToObservable().SubscribeOnMainThread((_) => action());
+        }
     }
 }
