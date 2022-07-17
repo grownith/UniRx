@@ -74,41 +74,41 @@ namespace UniRx.Tests
         }
 
         [Test]
-        public void ToObservable()
+        public void ToObservableImmediate()
         {
-            {
-                var msgs = new List<string>();
-                new[] { 1, 10, 100, 1000, 10000, 20000 }.ToObservable(Scheduler.Immediate)
-                    .Do(i => msgs.Add("DO:" + i))
-                    .Scan((x, y) =>
-                    {
-                        if (y == 100) throw new Exception("exception");
-                        msgs.Add("x:" + x + " y:" + y);
-                        return x + y;
-                    })
-                    .Subscribe(x => msgs.Add(x.ToString()), e => msgs.Add(e.Message), () => msgs.Add("comp"));
+            var msgs = new List<string>();
+            new[] { 1, 10, 100, 1000, 10000, 20000 }.ToObservable(Scheduler.Immediate)
+                .Do(i => msgs.Add("DO:" + i))
+                .Scan((x, y) =>
+                {
+                    if (y == 100) throw new Exception("exception");
+                    msgs.Add("x:" + x + " y:" + y);
+                    return x + y;
+                })
+                .Subscribe(x => msgs.Add(x.ToString()), e => msgs.Add(e.Message), () => msgs.Add("comp"));
 
-                msgs.Is("DO:1", "1", "DO:10", "x:1 y:10", "11", "DO:100", "exception",
-                    "DO:1000", "x:11 y:1000",
-                    "DO:10000", "x:1011 y:10000",
-                    "DO:20000", "x:11011 y:20000"
-                    );
-            }
+            msgs.Is("DO:1", "1", "DO:10", "x:1 y:10", "11", "DO:100", "exception",
+                "DO:1000", "x:11 y:1000",
+                "DO:10000", "x:1011 y:10000",
+                "DO:20000", "x:11011 y:20000"
+                );
+        }
 
-            {
-                var msgs = new List<string>();
-                new[] { 1, 10, 100, 1000, 10000, 20000 }.ToObservable(Scheduler.MainThread)
-                    .Do(i => msgs.Add("DO:" + i))
-                    .Scan((x, y) =>
-                    {
-                        if (y == 100) throw new Exception("exception");
-                        msgs.Add("x:" + x + " y:" + y);
-                        return x + y;
-                    })
-                    .Subscribe(x => msgs.Add(x.ToString()), e => msgs.Add(e.Message), () => msgs.Add("comp"));
+        [Test]
+        public void ToObservableCurrentThread()
+        {
+            var msgs = new List<string>();
+            new[] { 1, 10, 100, 1000, 10000, 20000 }.ToObservable(Scheduler.CurrentThread)
+                .Do(i => msgs.Add("DO:" + i))
+                .Scan((x, y) =>
+                {
+                    if (y == 100) throw new Exception("exception");
+                    msgs.Add("x:" + x + " y:" + y);
+                    return x + y;
+                })
+                .Subscribe(x => msgs.Add(x.ToString()), e => msgs.Add(e.Message), () => msgs.Add("comp"));
 
-                msgs.Is("DO:1", "1", "DO:10", "x:1 y:10", "11", "DO:100", "exception");
-            }
+            msgs.Is("DO:1", "1", "DO:10", "x:1 y:10", "11", "DO:100", "exception");
         }
 
         [Test]

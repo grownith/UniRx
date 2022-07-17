@@ -11,12 +11,13 @@ namespace UniRx.Tests
 	public class ErrorHandlingTest
     {
         [Test]
-        public void Finally()
+        public void Finally([Values(0,1)]int scheculderType)
         {
             var called = false;
             try
             {
-                Observable.Range(1, 10, Scheduler.Immediate)
+                var scheduler = new [] { Scheduler.Immediate,Scheduler.CurrentThread } [scheculderType];
+                Observable.Range(1, 10, scheduler)
                     .Do(x => { throw new Exception(); })
                     .Finally(() => called = true)
                     .Subscribe();

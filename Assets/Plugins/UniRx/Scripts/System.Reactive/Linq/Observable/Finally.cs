@@ -33,6 +33,7 @@ namespace System.Reactive.Linq.ObservableImpl
                 _finallyAction = finallyAction;
             }
 
+            bool isRun = false;
             public override void Run(IObservable<TSource> source)
             {
                 var d = source.SubscribeSafe(this);
@@ -48,7 +49,11 @@ namespace System.Reactive.Linq.ObservableImpl
                     }
                     finally
                     {
-                        _finallyAction();
+                        if(!isRun)
+                        {
+                            isRun = true;
+                            _finallyAction();
+                        }
                     }
                 }
             }
@@ -59,15 +64,19 @@ namespace System.Reactive.Linq.ObservableImpl
 
                 if (disposing)
                 {
-                    var d = Interlocked.Exchange(ref _sourceDisposable, BooleanDisposable.True);
-                    if (d != BooleanDisposable.True && d != null)
+                    try
                     {
-                        try
+                        var d = Interlocked.Exchange(ref _sourceDisposable, BooleanDisposable.True);
+                        if (d != BooleanDisposable.True && d != null)
                         {
-                            d.Dispose();
+                                d.Dispose();
                         }
-                        finally
+                    }
+                    finally
+                    {
+                        if(!isRun)
                         {
+                            isRun = true;
                             _finallyAction();
                         }
                     }

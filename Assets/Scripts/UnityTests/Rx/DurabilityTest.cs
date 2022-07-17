@@ -76,6 +76,7 @@ namespace UniRx.Operators
 					list.Add(i);
 					Observable.Return(i)
 						.Do(x => { if (x == 1) throw new Exception(); })
+						.CatchIgnore()
 						.Subscribe(x => list.Add(i));
 				});
 
@@ -96,6 +97,7 @@ namespace UniRx.Operators
 					list.Add(xx);
 					Observable.Return(xx)
 						.Do(x => { if (x == 1) throw new Exception(); })
+						.CatchIgnore()
 						.Subscribe(x => list.Add(x));
 				});
 
@@ -112,7 +114,7 @@ namespace UniRx.Operators
 		}
 
 		[Test]
-		public void Durability([NUnit.Framework.Values(0,3)]int condition)
+		public void Durability([NUnit.Framework.Range(0,3)]int condition)
 		{
 			var s1 = new Subject<int>();
 
@@ -126,6 +128,7 @@ namespace UniRx.Operators
 				list.Add(xx);
 				Observable.Return(xx)
 					.Do(x => { if (x == 1) throw new Exception(); })
+					.CatchIgnore()
 					.Subscribe(x => list.Add(x));
 			});
 

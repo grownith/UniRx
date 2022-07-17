@@ -8,6 +8,30 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PixelRect:
+    serializedVersion: 2
+    x: 643
+    y: 35
+    width: 758
+    height: 839
+  m_ShowMode: 0
+  m_Title: Test Runner
+  m_RootView: {fileID: 4}
+  m_MinSize: {x: 100, y: 121}
+  m_MaxSize: {x: 4000, y: 4021}
+  m_Maximized: 0
+--- !u!114 &2
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
@@ -19,12 +43,62 @@ MonoBehaviour:
     width: 1680
     height: 967
   m_ShowMode: 4
-  m_Title: Project
-  m_RootView: {fileID: 6}
+  m_Title: Scene
+  m_RootView: {fileID: 9}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
---- !u!114 &2
+--- !u!114 &3
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: TestRunnerWindow
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 758
+    height: 839
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 15}
+  m_Panes:
+  - {fileID: 15}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &4
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 3}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 758
+    height: 839
+  m_MinSize: {x: 100, y: 121}
+  m_MaxSize: {x: 4000, y: 4021}
+  vertical: 0
+  controlID: 116
+--- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -37,8 +111,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 9}
-  - {fileID: 3}
+  - {fileID: 12}
+  - {fileID: 6}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -48,8 +122,8 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 103
---- !u!114 &3
+  controlID: 50
+--- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -68,14 +142,14 @@ MonoBehaviour:
     y: 0
     width: 397
     height: 917
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 13}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 17}
   m_Panes:
-  - {fileID: 13}
+  - {fileID: 17}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &4
+--- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,12 +170,12 @@ MonoBehaviour:
     height: 543
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 14}
+  m_ActualView: {fileID: 18}
   m_Panes:
-  - {fileID: 14}
+  - {fileID: 18}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &5
+--- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,13 +196,13 @@ MonoBehaviour:
     height: 374
   m_MinSize: {x: 231, y: 271}
   m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 12}
+  m_ActualView: {fileID: 16}
   m_Panes:
-  - {fileID: 12}
-  - {fileID: 17}
+  - {fileID: 16}
+  - {fileID: 21}
   m_Selected: 0
   m_LastSelected: 1
---- !u!114 &6
+--- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,9 +215,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 7}
-  - {fileID: 2}
-  - {fileID: 8}
+  - {fileID: 10}
+  - {fileID: 5}
+  - {fileID: 11}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -156,7 +230,7 @@ MonoBehaviour:
   m_TopViewHeight: 30
   m_UseBottomView: 1
   m_BottomViewHeight: 20
---- !u!114 &7
+--- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -178,7 +252,7 @@ MonoBehaviour:
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LastLoadedLayoutName: 
---- !u!114 &8
+--- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -199,7 +273,7 @@ MonoBehaviour:
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
---- !u!114 &9
+--- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -212,8 +286,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 10}
-  - {fileID: 5}
+  - {fileID: 13}
+  - {fileID: 8}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -223,8 +297,8 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 39
---- !u!114 &10
+  controlID: 51
+--- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -237,8 +311,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 4}
-  - {fileID: 11}
+  - {fileID: 7}
+  - {fileID: 14}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -249,7 +323,7 @@ MonoBehaviour:
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
   controlID: 40
---- !u!114 &11
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -270,13 +344,3915 @@ MonoBehaviour:
     height: 543
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 15}
+  m_ActualView: {fileID: 19}
   m_Panes:
-  - {fileID: 15}
-  - {fileID: 16}
+  - {fileID: 19}
+  - {fileID: 20}
   m_Selected: 0
   m_LastSelected: 1
---- !u!114 &12
+--- !u!114 &15
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13401, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Test Runner
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 643
+    y: 35
+    width: 758
+    height: 818
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  m_Spl:
+    ID: 185
+    splitterInitialOffset: 0
+    currentActiveSplitter: -1
+    realSizes:
+    - 561
+    - 187
+    relativeSizes:
+    - 0.75
+    - 0.25
+    minSizes:
+    - 32
+    - 32
+    maxSizes:
+    - 0
+    - 0
+    lastTotalSize: 748
+    splitSize: 6
+    xOffset: 0
+    m_Version: 1
+    oldRealSizes: 
+    oldMinSizes: 
+    oldMaxSizes: 
+    oldSplitSize: 0
+  m_TestTypeToolbarIndex: 0
+  m_PlayModeTestListGUI:
+    m_Window: {fileID: 15}
+    m_NewResultList:
+    - id: 1005
+      uniqueId: '[UniRx][suite]'
+      name: UniRx
+      fullName: UniRx
+      resultStatus: 2
+      duration: 0.1112137
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
+    - id: 1216
+      uniqueId: '[UnityTests.dll][suite]'
+      name: UnityTests.dll
+      fullName: C:/Users/Thaina/Documents/git/UniRx/Library/ScriptAssemblies/UnityTests.dll
+      resultStatus: 2
+      duration: 0.0925568
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1005
+      parentUniqueId: '[UniRx][suite]'
+    - id: 1217
+      uniqueId: UnityTests.dll/[UniRx][suite]
+      name: UniRx
+      fullName: UniRx
+      resultStatus: 2
+      duration: 0.0891859
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1216
+      parentUniqueId: '[UnityTests.dll][suite]'
+    - id: 1218
+      uniqueId: UnityTests.dll/UniRx/[UnityTests][UniRx.Operators][suite]
+      name: Operators
+      fullName: UniRx.Operators
+      resultStatus: 2
+      duration: 0.0864323
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1217
+      parentUniqueId: UnityTests.dll/[UniRx][suite]
+    - id: 1008
+      uniqueId: UnityTests.dll/UniRx/Operators/[UnityTests][UniRx.Operators.DurabilityTest][suite]
+      name: DurabilityTest
+      fullName: UniRx.Operators.DurabilityTest
+      resultStatus: 2
+      duration: 0.0830156
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1218
+      parentUniqueId: UnityTests.dll/UniRx/[UnityTests][UniRx.Operators][suite]
+    - id: 1018
+      uniqueId: UnityTests.dll/UniRx/Operators/DurabilityTest/[UnityTests][UniRx.Operators.DurabilityTest.Durability][suite]
+      name: Durability
+      fullName: UniRx.Operators.DurabilityTest.Durability
+      resultStatus: 2
+      duration: 0.0767617
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1008
+      parentUniqueId: UnityTests.dll/UniRx/Operators/[UnityTests][UniRx.Operators.DurabilityTest][suite]
+    - id: 1016
+      uniqueId: UnityTests.dll/UniRx/Operators/DurabilityTest/Durability/[UnityTests][UniRx.Operators.DurabilityTest.Durability(0)]
+      name: Durability(0)
+      fullName: UniRx.Operators.DurabilityTest.Durability(0)
+      resultStatus: 1
+      duration: 0.0518192
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1018
+      parentUniqueId: UnityTests.dll/UniRx/Operators/DurabilityTest/[UnityTests][UniRx.Operators.DurabilityTest.Durability][suite]
+    - id: 1017
+      uniqueId: UnityTests.dll/UniRx/Operators/DurabilityTest/Durability/[UnityTests][UniRx.Operators.DurabilityTest.Durability(3)]
+      name: Durability(3)
+      fullName: UniRx.Operators.DurabilityTest.Durability(3)
+      resultStatus: 2
+      duration: 0.0607971
+      messages: "  Expected is <System.Int32[5]>, actual is <System.Collections.Generic.List`1[System.Int32]>
+        with 3 elements\r\n  Values differ at index [3]\r\n  Missing:  < 10, 10 >"
+      output: 
+      stacktrace: 'at UniRx.Operators.DurabilityTest.Durability (System.Int32 condition)
+        [0x000e9] in C:\Users\Thaina\Documents\git\UniRx\Assets\Scripts\UnityTests\Rx\DurabilityTest.cs:136
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1018
+      parentUniqueId: UnityTests.dll/UniRx/Operators/DurabilityTest/[UnityTests][UniRx.Operators.DurabilityTest.Durability][suite]
+    - id: 1015
+      uniqueId: UnityTests.dll/UniRx/Operators/DurabilityTest/[UnityTests][UniRx.Operators.DurabilityTest.FromTest][suite]
+      name: FromTest
+      fullName: UniRx.Operators.DurabilityTest.FromTest
+      resultStatus: 2
+      duration: 0.0411669
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1008
+      parentUniqueId: UnityTests.dll/UniRx/Operators/[UnityTests][UniRx.Operators.DurabilityTest][suite]
+    - id: 1009
+      uniqueId: UnityTests.dll/UniRx/Operators/DurabilityTest/FromTest/[UnityTests][UniRx.Operators.DurabilityTest.FromTest(False,"EventPattern")]
+      name: FromTest(False,"EventPattern")
+      fullName: UniRx.Operators.DurabilityTest.FromTest(False,"EventPattern")
+      resultStatus: 2
+      duration: 0.0134066
+      messages: "  Expected is <System.Int32[5]>, actual is <System.Int32[3]>\r\n 
+        Values differ at index [3]\r\n  Missing:  < 10, 10 >"
+      output: 
+      stacktrace: 'at NUnit.Framework.CollectionAssert.AreEqual (System.Collections.IEnumerable
+        expected, System.Collections.IEnumerable actual, System.String message, System.Object[]
+        args) [0x00008] in <10b6135e63434fdba4fc6c109928ab3b>:0
+
+        at ChainingAssertion.Is[T]
+        (System.Collections.Generic.IEnumerable`1[T] actual, System.Collections.Generic.IEnumerable`1[T]
+        expected, System.String message) [0x00001] in C:\Users\Thaina\Documents\git\UniRx\Assets\Scripts\UnityTests\ChainingAssertion.Unity.cs:40
+
+        at
+        ChainingAssertion.Is[T] (System.Collections.Generic.IEnumerable`1[T] actual,
+        T[] expected) [0x00001] in C:\Users\Thaina\Documents\git\UniRx\Assets\Scripts\UnityTests\ChainingAssertion.Unity.cs:34
+
+        at
+        UniRx.Operators.DurabilityTest.FromTest (System.Boolean useLocal, System.String
+        type) [0x00338] in C:\Users\Thaina\Documents\git\UniRx\Assets\Scripts\UnityTests\Rx\DurabilityTest.cs:106
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1015
+      parentUniqueId: UnityTests.dll/UniRx/Operators/DurabilityTest/[UnityTests][UniRx.Operators.DurabilityTest.FromTest][suite]
+    - id: 1010
+      uniqueId: UnityTests.dll/UniRx/Operators/DurabilityTest/FromTest/[UnityTests][UniRx.Operators.DurabilityTest.FromTest(False,"EventUnityLike")]
+      name: FromTest(False,"EventUnityLike")
+      fullName: UniRx.Operators.DurabilityTest.FromTest(False,"EventUnityLike")
+      resultStatus: 2
+      duration: 0.0045396
+      messages: "  Expected is <System.Int32[5]>, actual is <System.Int32[3]>\r\n 
+        Values differ at index [3]\r\n  Missing:  < 10, 10 >"
+      output: 
+      stacktrace: 'at NUnit.Framework.CollectionAssert.AreEqual (System.Collections.IEnumerable
+        expected, System.Collections.IEnumerable actual, System.String message, System.Object[]
+        args) [0x00008] in <10b6135e63434fdba4fc6c109928ab3b>:0
+
+        at ChainingAssertion.Is[T]
+        (System.Collections.Generic.IEnumerable`1[T] actual, System.Collections.Generic.IEnumerable`1[T]
+        expected, System.String message) [0x00001] in C:\Users\Thaina\Documents\git\UniRx\Assets\Scripts\UnityTests\ChainingAssertion.Unity.cs:40
+
+        at
+        ChainingAssertion.Is[T] (System.Collections.Generic.IEnumerable`1[T] actual,
+        T[] expected) [0x00001] in C:\Users\Thaina\Documents\git\UniRx\Assets\Scripts\UnityTests\ChainingAssertion.Unity.cs:34
+
+        at
+        UniRx.Operators.DurabilityTest.FromTest (System.Boolean useLocal, System.String
+        type) [0x00338] in C:\Users\Thaina\Documents\git\UniRx\Assets\Scripts\UnityTests\Rx\DurabilityTest.cs:106
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1015
+      parentUniqueId: UnityTests.dll/UniRx/Operators/DurabilityTest/[UnityTests][UniRx.Operators.DurabilityTest.FromTest][suite]
+    - id: 1011
+      uniqueId: UnityTests.dll/UniRx/Operators/DurabilityTest/FromTest/[UnityTests][UniRx.Operators.DurabilityTest.FromTest(False,"EventUnity")]
+      name: FromTest(False,"EventUnity")
+      fullName: UniRx.Operators.DurabilityTest.FromTest(False,"EventUnity")
+      resultStatus: 2
+      duration: 0.0042209
+      messages: "  Expected is <System.Int32[5]>, actual is <System.Int32[3]>\r\n 
+        Values differ at index [3]\r\n  Missing:  < 10, 10 >"
+      output: 
+      stacktrace: 'at NUnit.Framework.CollectionAssert.AreEqual (System.Collections.IEnumerable
+        expected, System.Collections.IEnumerable actual, System.String message, System.Object[]
+        args) [0x00008] in <10b6135e63434fdba4fc6c109928ab3b>:0
+
+        at ChainingAssertion.Is[T]
+        (System.Collections.Generic.IEnumerable`1[T] actual, System.Collections.Generic.IEnumerable`1[T]
+        expected, System.String message) [0x00001] in C:\Users\Thaina\Documents\git\UniRx\Assets\Scripts\UnityTests\ChainingAssertion.Unity.cs:40
+
+        at
+        ChainingAssertion.Is[T] (System.Collections.Generic.IEnumerable`1[T] actual,
+        T[] expected) [0x00001] in C:\Users\Thaina\Documents\git\UniRx\Assets\Scripts\UnityTests\ChainingAssertion.Unity.cs:34
+
+        at
+        UniRx.Operators.DurabilityTest.FromTest (System.Boolean useLocal, System.String
+        type) [0x00338] in C:\Users\Thaina\Documents\git\UniRx\Assets\Scripts\UnityTests\Rx\DurabilityTest.cs:106
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1015
+      parentUniqueId: UnityTests.dll/UniRx/Operators/DurabilityTest/[UnityTests][UniRx.Operators.DurabilityTest.FromTest][suite]
+    - id: 1012
+      uniqueId: UnityTests.dll/UniRx/Operators/DurabilityTest/FromTest/[UnityTests][UniRx.Operators.DurabilityTest.FromTest(True,"EventPattern")]
+      name: FromTest(True,"EventPattern")
+      fullName: UniRx.Operators.DurabilityTest.FromTest(True,"EventPattern")
+      resultStatus: 2
+      duration: 0.0052375
+      messages: "  Expected is <System.Int32[5]>, actual is <System.Int32[3]>\r\n 
+        Values differ at index [3]\r\n  Missing:  < 10, 10 >"
+      output: 
+      stacktrace: 'at NUnit.Framework.CollectionAssert.AreEqual (System.Collections.IEnumerable
+        expected, System.Collections.IEnumerable actual, System.String message, System.Object[]
+        args) [0x00008] in <10b6135e63434fdba4fc6c109928ab3b>:0
+
+        at ChainingAssertion.Is[T]
+        (System.Collections.Generic.IEnumerable`1[T] actual, System.Collections.Generic.IEnumerable`1[T]
+        expected, System.String message) [0x00001] in C:\Users\Thaina\Documents\git\UniRx\Assets\Scripts\UnityTests\ChainingAssertion.Unity.cs:40
+
+        at
+        ChainingAssertion.Is[T] (System.Collections.Generic.IEnumerable`1[T] actual,
+        T[] expected) [0x00001] in C:\Users\Thaina\Documents\git\UniRx\Assets\Scripts\UnityTests\ChainingAssertion.Unity.cs:34
+
+        at
+        UniRx.Operators.DurabilityTest.FromTest (System.Boolean useLocal, System.String
+        type) [0x001c2] in C:\Users\Thaina\Documents\git\UniRx\Assets\Scripts\UnityTests\Rx\DurabilityTest.cs:86
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1015
+      parentUniqueId: UnityTests.dll/UniRx/Operators/DurabilityTest/[UnityTests][UniRx.Operators.DurabilityTest.FromTest][suite]
+    - id: 1013
+      uniqueId: UnityTests.dll/UniRx/Operators/DurabilityTest/FromTest/[UnityTests][UniRx.Operators.DurabilityTest.FromTest(True,"EventUnityLike")]
+      name: FromTest(True,"EventUnityLike")
+      fullName: UniRx.Operators.DurabilityTest.FromTest(True,"EventUnityLike")
+      resultStatus: 2
+      duration: 0.0063535
+      messages: "  Expected is <System.Int32[5]>, actual is <System.Int32[3]>\r\n 
+        Values differ at index [3]\r\n  Missing:  < 10, 10 >"
+      output: 
+      stacktrace: 'at NUnit.Framework.CollectionAssert.AreEqual (System.Collections.IEnumerable
+        expected, System.Collections.IEnumerable actual, System.String message, System.Object[]
+        args) [0x00008] in <10b6135e63434fdba4fc6c109928ab3b>:0
+
+        at ChainingAssertion.Is[T]
+        (System.Collections.Generic.IEnumerable`1[T] actual, System.Collections.Generic.IEnumerable`1[T]
+        expected, System.String message) [0x00001] in C:\Users\Thaina\Documents\git\UniRx\Assets\Scripts\UnityTests\ChainingAssertion.Unity.cs:40
+
+        at
+        ChainingAssertion.Is[T] (System.Collections.Generic.IEnumerable`1[T] actual,
+        T[] expected) [0x00001] in C:\Users\Thaina\Documents\git\UniRx\Assets\Scripts\UnityTests\ChainingAssertion.Unity.cs:34
+
+        at
+        UniRx.Operators.DurabilityTest.FromTest (System.Boolean useLocal, System.String
+        type) [0x001c2] in C:\Users\Thaina\Documents\git\UniRx\Assets\Scripts\UnityTests\Rx\DurabilityTest.cs:86
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1015
+      parentUniqueId: UnityTests.dll/UniRx/Operators/DurabilityTest/[UnityTests][UniRx.Operators.DurabilityTest.FromTest][suite]
+    - id: 1014
+      uniqueId: UnityTests.dll/UniRx/Operators/DurabilityTest/FromTest/[UnityTests][UniRx.Operators.DurabilityTest.FromTest(True,"EventUnity")]
+      name: FromTest(True,"EventUnity")
+      fullName: UniRx.Operators.DurabilityTest.FromTest(True,"EventUnity")
+      resultStatus: 2
+      duration: 0.0034331
+      messages: "  Expected is <System.Int32[5]>, actual is <System.Int32[3]>\r\n 
+        Values differ at index [3]\r\n  Missing:  < 10, 10 >"
+      output: 
+      stacktrace: 'at NUnit.Framework.CollectionAssert.AreEqual (System.Collections.IEnumerable
+        expected, System.Collections.IEnumerable actual, System.String message, System.Object[]
+        args) [0x00008] in <10b6135e63434fdba4fc6c109928ab3b>:0
+
+        at ChainingAssertion.Is[T]
+        (System.Collections.Generic.IEnumerable`1[T] actual, System.Collections.Generic.IEnumerable`1[T]
+        expected, System.String message) [0x00001] in C:\Users\Thaina\Documents\git\UniRx\Assets\Scripts\UnityTests\ChainingAssertion.Unity.cs:40
+
+        at
+        ChainingAssertion.Is[T] (System.Collections.Generic.IEnumerable`1[T] actual,
+        T[] expected) [0x00001] in C:\Users\Thaina\Documents\git\UniRx\Assets\Scripts\UnityTests\ChainingAssertion.Unity.cs:34
+
+        at
+        UniRx.Operators.DurabilityTest.FromTest (System.Boolean useLocal, System.String
+        type) [0x001c2] in C:\Users\Thaina\Documents\git\UniRx\Assets\Scripts\UnityTests\Rx\DurabilityTest.cs:86
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1015
+      parentUniqueId: UnityTests.dll/UniRx/Operators/DurabilityTest/[UnityTests][UniRx.Operators.DurabilityTest.FromTest][suite]
+    - id: 1219
+      uniqueId: UnityTests.dll/UniRx/[UnityTests][UniRx.Tests][suite]
+      name: Tests
+      fullName: UniRx.Tests
+      resultStatus: 2
+      duration: 109.91994
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1217
+      parentUniqueId: UnityTests.dll/[UniRx][suite]
+    - id: 1019
+      uniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.DisposableTest][suite]
+      name: DisposableTest
+      fullName: UniRx.Tests.DisposableTest
+      resultStatus: 1
+      duration: 0.0138722
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1219
+      parentUniqueId: UnityTests.dll/UniRx/[UnityTests][UniRx.Tests][suite]
+    - id: 1023
+      uniqueId: UnityTests.dll/UniRx/Tests/DisposableTest/[UnityTests][UniRx.Tests.DisposableTest.Boolean]
+      name: Boolean
+      fullName: UniRx.Tests.DisposableTest.Boolean
+      resultStatus: 1
+      duration: 0.000633
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1019
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.DisposableTest][suite]
+    - id: 1021
+      uniqueId: UnityTests.dll/UniRx/Tests/DisposableTest/[UnityTests][UniRx.Tests.DisposableTest.MultipleAssignment]
+      name: MultipleAssignment
+      fullName: UniRx.Tests.DisposableTest.MultipleAssignment
+      resultStatus: 1
+      duration: 0.0012688
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1019
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.DisposableTest][suite]
+    - id: 1022
+      uniqueId: UnityTests.dll/UniRx/Tests/DisposableTest/[UnityTests][UniRx.Tests.DisposableTest.Serial]
+      name: Serial
+      fullName: UniRx.Tests.DisposableTest.Serial
+      resultStatus: 1
+      duration: 0.0010364
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1019
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.DisposableTest][suite]
+    - id: 1020
+      uniqueId: UnityTests.dll/UniRx/Tests/DisposableTest/[UnityTests][UniRx.Tests.DisposableTest.SingleAssignment]
+      name: SingleAssignment
+      fullName: UniRx.Tests.DisposableTest.SingleAssignment
+      resultStatus: 1
+      duration: 0.0012244
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1019
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.DisposableTest][suite]
+    - id: 1060
+      uniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ErrorHandlingTest][suite]
+      name: ErrorHandlingTest
+      fullName: UniRx.Tests.ErrorHandlingTest
+      resultStatus: 2
+      duration: 0.0594474
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1219
+      parentUniqueId: UnityTests.dll/UniRx/[UnityTests][UniRx.Tests][suite]
+    - id: 1062
+      uniqueId: UnityTests.dll/UniRx/Tests/ErrorHandlingTest/[UnityTests][UniRx.Tests.ErrorHandlingTest.Catch]
+      name: Catch
+      fullName: UniRx.Tests.ErrorHandlingTest.Catch
+      resultStatus: 1
+      duration: 0.0219135
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1060
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ErrorHandlingTest][suite]
+    - id: 1063
+      uniqueId: UnityTests.dll/UniRx/Tests/ErrorHandlingTest/[UnityTests][UniRx.Tests.ErrorHandlingTest.CatchEnumerable]
+      name: CatchEnumerable
+      fullName: UniRx.Tests.ErrorHandlingTest.CatchEnumerable
+      resultStatus: 1
+      duration: 0.0074449
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1060
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ErrorHandlingTest][suite]
+    - id: 1061
+      uniqueId: UnityTests.dll/UniRx/Tests/ErrorHandlingTest/[UnityTests][UniRx.Tests.ErrorHandlingTest.Finally]
+      name: Finally
+      fullName: UniRx.Tests.ErrorHandlingTest.Finally
+      resultStatus: 2
+      duration: 0.0056916
+      messages: "UnityEngine.Assertions.AssertionException : \nAssertion failure.
+        Value was False\r\nExpected: True"
+      output: 
+      stacktrace: "  at UnityEngine.Assertions.Assert.Fail (System.String message,
+        System.String userMessage) [0x00043] in <9d8790cb07b5448489717b720a1ca024>:0
+        \r\n  at UnityEngine.Assertions.Assert.IsTrue (System.Boolean condition,
+        System.String message) [0x0000f] in <9d8790cb07b5448489717b720a1ca024>:0
+        \r\n  at ChainingAssertion.IsTrue (System.Boolean value, System.String message)
+        [0x00001] in C:\\Users\\Thaina\\Documents\\git\\UniRx\\Assets\\Scripts\\UnityTests\\ChainingAssertion.Unity.cs:108
+        \r\n  at UniRx.Tests.ErrorHandlingTest.Finally () [0x00062] in C:\\Users\\Thaina\\Documents\\git\\UniRx\\Assets\\Scripts\\UnityTests\\Rx\\Observable.ErrorHandlingTest.cs:29
+        \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n 
+        at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
+        invokeAttr, System.Reflection.Binder binder, System.Object[] parameters,
+        System.Globalization.CultureInfo culture) [0x0006a] in <9e4b6123fac542e6b81827fd1c47c2bc>:0 "
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1060
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ErrorHandlingTest][suite]
+    - id: 1024
+      uniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.MicroCoroutineTest][suite]
+      name: MicroCoroutineTest
+      fullName: UniRx.Tests.MicroCoroutineTest
+      resultStatus: 1
+      duration: 10.248692
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1219
+      parentUniqueId: UnityTests.dll/UniRx/[UnityTests][UniRx.Tests][suite]
+    - id: 1025
+      uniqueId: UnityTests.dll/UniRx/Tests/MicroCoroutineTest/[UnityTests][UniRx.Tests.MicroCoroutineTest.EnumerationCycle]
+      name: EnumerationCycle
+      fullName: UniRx.Tests.MicroCoroutineTest.EnumerationCycle
+      resultStatus: 1
+      duration: 0.0039644
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1024
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.MicroCoroutineTest][suite]
+    - id: 1026
+      uniqueId: UnityTests.dll/UniRx/Tests/MicroCoroutineTest/[UnityTests][UniRx.Tests.MicroCoroutineTest.EnumerationCycleBlank]
+      name: EnumerationCycleBlank
+      fullName: UniRx.Tests.MicroCoroutineTest.EnumerationCycleBlank
+      resultStatus: 1
+      duration: 0.0005554
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1024
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.MicroCoroutineTest][suite]
+    - id: 1027
+      uniqueId: UnityTests.dll/UniRx/Tests/MicroCoroutineTest/[UnityTests][UniRx.Tests.MicroCoroutineTest.EnumerationCycleFull]
+      name: EnumerationCycleFull
+      fullName: UniRx.Tests.MicroCoroutineTest.EnumerationCycleFull
+      resultStatus: 1
+      duration: 0.0007228
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1024
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.MicroCoroutineTest][suite]
+    - id: 1028
+      uniqueId: UnityTests.dll/UniRx/Tests/MicroCoroutineTest/[UnityTests][UniRx.Tests.MicroCoroutineTest.EnumerationCycleRandom]
+      name: EnumerationCycleRandom
+      fullName: UniRx.Tests.MicroCoroutineTest.EnumerationCycleRandom
+      resultStatus: 1
+      duration: 10.239179
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1024
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.MicroCoroutineTest][suite]
+    - id: 1029
+      uniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableConcatTest][suite]
+      name: ObservableConcatTest
+      fullName: UniRx.Tests.ObservableConcatTest
+      resultStatus: 1
+      duration: 0.103372
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1219
+      parentUniqueId: UnityTests.dll/UniRx/[UnityTests][UniRx.Tests][suite]
+    - id: 1037
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableConcatTest/[UnityTests][UniRx.Tests.ObservableConcatTest.CombineLatest]
+      name: CombineLatest
+      fullName: UniRx.Tests.ObservableConcatTest.CombineLatest
+      resultStatus: 1
+      duration: 0.0093266
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1029
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableConcatTest][suite]
+    - id: 1038
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableConcatTest/[UnityTests][UniRx.Tests.ObservableConcatTest.CombineLatest2]
+      name: CombineLatest2
+      fullName: UniRx.Tests.ObservableConcatTest.CombineLatest2
+      resultStatus: 1
+      duration: 0.0007151
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1029
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableConcatTest][suite]
+    - id: 1039
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableConcatTest/[UnityTests][UniRx.Tests.ObservableConcatTest.CombineLatest3]
+      name: CombineLatest3
+      fullName: UniRx.Tests.ObservableConcatTest.CombineLatest3
+      resultStatus: 1
+      duration: 0.000558
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1029
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableConcatTest][suite]
+    - id: 1040
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableConcatTest/[UnityTests][UniRx.Tests.ObservableConcatTest.CombineLatest4]
+      name: CombineLatest4
+      fullName: UniRx.Tests.ObservableConcatTest.CombineLatest4
+      resultStatus: 1
+      duration: 0.0005101
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1029
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableConcatTest][suite]
+    - id: 1041
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableConcatTest/[UnityTests][UniRx.Tests.ObservableConcatTest.CombineLatestMulti]
+      name: CombineLatestMulti
+      fullName: UniRx.Tests.ObservableConcatTest.CombineLatestMulti
+      resultStatus: 1
+      duration: 0.0045888
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1029
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableConcatTest][suite]
+    - id: 1042
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableConcatTest/[UnityTests][UniRx.Tests.ObservableConcatTest.CombineLatestMulti2]
+      name: CombineLatestMulti2
+      fullName: UniRx.Tests.ObservableConcatTest.CombineLatestMulti2
+      resultStatus: 1
+      duration: 0.0006758
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1029
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableConcatTest][suite]
+    - id: 1043
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableConcatTest/[UnityTests][UniRx.Tests.ObservableConcatTest.CombineLatestMulti3]
+      name: CombineLatestMulti3
+      fullName: UniRx.Tests.ObservableConcatTest.CombineLatestMulti3
+      resultStatus: 1
+      duration: 0.000648
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1029
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableConcatTest][suite]
+    - id: 1044
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableConcatTest/[UnityTests][UniRx.Tests.ObservableConcatTest.CombineLatestMulti4]
+      name: CombineLatestMulti4
+      fullName: UniRx.Tests.ObservableConcatTest.CombineLatestMulti4
+      resultStatus: 1
+      duration: 0.0005554
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1029
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableConcatTest][suite]
+    - id: 1030
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableConcatTest/[UnityTests][UniRx.Tests.ObservableConcatTest.Concat]
+      name: Concat
+      fullName: UniRx.Tests.ObservableConcatTest.Concat
+      resultStatus: 1
+      duration: 0.0062502
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1029
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableConcatTest][suite]
+    - id: 1053
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableConcatTest/[UnityTests][UniRx.Tests.ObservableConcatTest.Merge]
+      name: Merge
+      fullName: UniRx.Tests.ObservableConcatTest.Merge
+      resultStatus: 1
+      duration: 0.0096932
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1029
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableConcatTest][suite]
+    - id: 1054
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableConcatTest/[UnityTests][UniRx.Tests.ObservableConcatTest.MergeConcurrent]
+      name: MergeConcurrent
+      fullName: UniRx.Tests.ObservableConcatTest.MergeConcurrent
+      resultStatus: 1
+      duration: 0.0039404
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1029
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableConcatTest][suite]
+    - id: 1052
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableConcatTest/[UnityTests][UniRx.Tests.ObservableConcatTest.StartWith]
+      name: StartWith
+      fullName: UniRx.Tests.ObservableConcatTest.StartWith
+      resultStatus: 1
+      duration: 0.0092424
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1029
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableConcatTest][suite]
+    - id: 1055
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableConcatTest/[UnityTests][UniRx.Tests.ObservableConcatTest.Switch]
+      name: Switch
+      fullName: UniRx.Tests.ObservableConcatTest.Switch
+      resultStatus: 1
+      duration: 0.0037317
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1029
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableConcatTest][suite]
+    - id: 1036
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableConcatTest/[UnityTests][UniRx.Tests.ObservableConcatTest.WhenAll]
+      name: WhenAll
+      fullName: UniRx.Tests.ObservableConcatTest.WhenAll
+      resultStatus: 1
+      duration: 0.0031025
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1029
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableConcatTest][suite]
+    - id: 1051
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableConcatTest/[UnityTests][UniRx.Tests.ObservableConcatTest.WithLatestFrom]
+      name: WithLatestFrom
+      fullName: UniRx.Tests.ObservableConcatTest.WithLatestFrom
+      resultStatus: 1
+      duration: 0.0046175
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1029
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableConcatTest][suite]
+    - id: 1031
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableConcatTest/[UnityTests][UniRx.Tests.ObservableConcatTest.Zip]
+      name: Zip
+      fullName: UniRx.Tests.ObservableConcatTest.Zip
+      resultStatus: 1
+      duration: 0.0030718
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1029
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableConcatTest][suite]
+    - id: 1032
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableConcatTest/[UnityTests][UniRx.Tests.ObservableConcatTest.Zip2]
+      name: Zip2
+      fullName: UniRx.Tests.ObservableConcatTest.Zip2
+      resultStatus: 1
+      duration: 0.0007998
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1029
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableConcatTest][suite]
+    - id: 1045
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableConcatTest/[UnityTests][UniRx.Tests.ObservableConcatTest.ZipLatest]
+      name: ZipLatest
+      fullName: UniRx.Tests.ObservableConcatTest.ZipLatest
+      resultStatus: 1
+      duration: 0.0028758
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1029
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableConcatTest][suite]
+    - id: 1046
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableConcatTest/[UnityTests][UniRx.Tests.ObservableConcatTest.ZipLatest2]
+      name: ZipLatest2
+      fullName: UniRx.Tests.ObservableConcatTest.ZipLatest2
+      resultStatus: 1
+      duration: 0.0006808
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1029
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableConcatTest][suite]
+    - id: 1047
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableConcatTest/[UnityTests][UniRx.Tests.ObservableConcatTest.ZipLatest2Ex]
+      name: ZipLatest2Ex
+      fullName: UniRx.Tests.ObservableConcatTest.ZipLatest2Ex
+      resultStatus: 1
+      duration: 0.0004841
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1029
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableConcatTest][suite]
+    - id: 1048
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableConcatTest/[UnityTests][UniRx.Tests.ObservableConcatTest.ZipLatestMulti]
+      name: ZipLatestMulti
+      fullName: UniRx.Tests.ObservableConcatTest.ZipLatestMulti
+      resultStatus: 1
+      duration: 0.0033691
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1029
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableConcatTest][suite]
+    - id: 1049
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableConcatTest/[UnityTests][UniRx.Tests.ObservableConcatTest.ZipLatestMulti2]
+      name: ZipLatestMulti2
+      fullName: UniRx.Tests.ObservableConcatTest.ZipLatestMulti2
+      resultStatus: 1
+      duration: 0.0006918
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1029
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableConcatTest][suite]
+    - id: 1050
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableConcatTest/[UnityTests][UniRx.Tests.ObservableConcatTest.ZipLatestNth]
+      name: ZipLatestNth
+      fullName: UniRx.Tests.ObservableConcatTest.ZipLatestNth
+      resultStatus: 1
+      duration: 0.0041123
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1029
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableConcatTest][suite]
+    - id: 1033
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableConcatTest/[UnityTests][UniRx.Tests.ObservableConcatTest.ZipMulti]
+      name: ZipMulti
+      fullName: UniRx.Tests.ObservableConcatTest.ZipMulti
+      resultStatus: 1
+      duration: 0.0030974
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1029
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableConcatTest][suite]
+    - id: 1034
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableConcatTest/[UnityTests][UniRx.Tests.ObservableConcatTest.ZipMulti2]
+      name: ZipMulti2
+      fullName: UniRx.Tests.ObservableConcatTest.ZipMulti2
+      resultStatus: 1
+      duration: 0.0007192
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1029
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableConcatTest][suite]
+    - id: 1035
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableConcatTest/[UnityTests][UniRx.Tests.ObservableConcatTest.ZipNth]
+      name: ZipNth
+      fullName: UniRx.Tests.ObservableConcatTest.ZipNth
+      resultStatus: 1
+      duration: 0.0049899
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1029
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableConcatTest][suite]
+    - id: 1056
+      uniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableConcurrencyTest][suite]
+      name: ObservableConcurrencyTest
+      fullName: UniRx.Tests.ObservableConcurrencyTest
+      resultStatus: 1
+      duration: 5.0666103
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1219
+      parentUniqueId: UnityTests.dll/UniRx/[UnityTests][UniRx.Tests][suite]
+    - id: 1059
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableConcurrencyTest/[UnityTests][UniRx.Tests.ObservableConcurrencyTest.AmbMultiTest]
+      name: AmbMultiTest
+      fullName: UniRx.Tests.ObservableConcurrencyTest.AmbMultiTest
+      resultStatus: 1
+      duration: 3.015163
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1056
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableConcurrencyTest][suite]
+    - id: 1058
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableConcurrencyTest/[UnityTests][UniRx.Tests.ObservableConcurrencyTest.AmbTest]
+      name: AmbTest
+      fullName: UniRx.Tests.ObservableConcurrencyTest.AmbTest
+      resultStatus: 1
+      duration: 2.0037165
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1056
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableConcurrencyTest][suite]
+    - id: 1057
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableConcurrencyTest/[UnityTests][UniRx.Tests.ObservableConcurrencyTest.ObserveOnTest]
+      name: ObserveOnTest
+      fullName: UniRx.Tests.ObservableConcurrencyTest.ObserveOnTest
+      resultStatus: 1
+      duration: 0.0205686
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1056
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableConcurrencyTest][suite]
+    - id: 1064
+      uniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableEventsTest][suite]
+      name: ObservableEventsTest
+      fullName: UniRx.Tests.ObservableEventsTest
+      resultStatus: 1
+      duration: 0.0525827
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1219
+      parentUniqueId: UnityTests.dll/UniRx/[UnityTests][UniRx.Tests][suite]
+    - id: 1066
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableEventsTest/[UnityTests][UniRx.Tests.ObservableEventsTest.FromEvent]
+      name: FromEvent
+      fullName: UniRx.Tests.ObservableEventsTest.FromEvent
+      resultStatus: 1
+      duration: 0.0183513
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1064
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableEventsTest][suite]
+    - id: 1065
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableEventsTest/[UnityTests][UniRx.Tests.ObservableEventsTest.FromEventPattern]
+      name: FromEventPattern
+      fullName: UniRx.Tests.ObservableEventsTest.FromEventPattern
+      resultStatus: 1
+      duration: 0.0076884
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1064
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableEventsTest][suite]
+    - id: 1067
+      uniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableGeneratorTest][suite]
+      name: ObservableGeneratorTest
+      fullName: UniRx.Tests.ObservableGeneratorTest
+      resultStatus: 2
+      duration: 0.0765865
+      messages: One or more child tests had errors
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1219
+      parentUniqueId: UnityTests.dll/UniRx/[UnityTests][UniRx.Tests][suite]
+    - id: 1068
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableGeneratorTest/[UnityTests][UniRx.Tests.ObservableGeneratorTest.Empty]
+      name: Empty
+      fullName: UniRx.Tests.ObservableGeneratorTest.Empty
+      resultStatus: 1
+      duration: 0.0042535
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1067
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableGeneratorTest][suite]
+    - id: 1069
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableGeneratorTest/[UnityTests][UniRx.Tests.ObservableGeneratorTest.Never]
+      name: Never
+      fullName: UniRx.Tests.ObservableGeneratorTest.Never
+      resultStatus: 1
+      duration: 0.0186853
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1067
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableGeneratorTest][suite]
+    - id: 1086
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableGeneratorTest/[UnityTests][UniRx.Tests.ObservableGeneratorTest.OptimizeReturnTest][suite]
+      name: OptimizeReturnTest
+      fullName: UniRx.Tests.ObservableGeneratorTest.OptimizeReturnTest
+      resultStatus: 1
+      duration: 0.0163563
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1067
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableGeneratorTest][suite]
+    - id: 1077
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableGeneratorTest/OptimizeReturnTest/[UnityTests][UniRx.Tests.ObservableGeneratorTest.OptimizeReturnTest(-1)]
+      name: OptimizeReturnTest(-1)
+      fullName: UniRx.Tests.ObservableGeneratorTest.OptimizeReturnTest(-1)
+      resultStatus: 1
+      duration: 0.0035207
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1086
+      parentUniqueId: UnityTests.dll/UniRx/Tests/ObservableGeneratorTest/[UnityTests][UniRx.Tests.ObservableGeneratorTest.OptimizeReturnTest][suite]
+    - id: 1078
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableGeneratorTest/OptimizeReturnTest/[UnityTests][UniRx.Tests.ObservableGeneratorTest.OptimizeReturnTest(-2)]
+      name: OptimizeReturnTest(-2)
+      fullName: UniRx.Tests.ObservableGeneratorTest.OptimizeReturnTest(-2)
+      resultStatus: 1
+      duration: 0.0003939
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1086
+      parentUniqueId: UnityTests.dll/UniRx/Tests/ObservableGeneratorTest/[UnityTests][UniRx.Tests.ObservableGeneratorTest.OptimizeReturnTest][suite]
+    - id: 1079
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableGeneratorTest/OptimizeReturnTest/[UnityTests][UniRx.Tests.ObservableGeneratorTest.OptimizeReturnTest(0)]
+      name: OptimizeReturnTest(0)
+      fullName: UniRx.Tests.ObservableGeneratorTest.OptimizeReturnTest(0)
+      resultStatus: 1
+      duration: 0.0003571
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1086
+      parentUniqueId: UnityTests.dll/UniRx/Tests/ObservableGeneratorTest/[UnityTests][UniRx.Tests.ObservableGeneratorTest.OptimizeReturnTest][suite]
+    - id: 1080
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableGeneratorTest/OptimizeReturnTest/[UnityTests][UniRx.Tests.ObservableGeneratorTest.OptimizeReturnTest(3)]
+      name: OptimizeReturnTest(3)
+      fullName: UniRx.Tests.ObservableGeneratorTest.OptimizeReturnTest(3)
+      resultStatus: 1
+      duration: 0.0003373
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1086
+      parentUniqueId: UnityTests.dll/UniRx/Tests/ObservableGeneratorTest/[UnityTests][UniRx.Tests.ObservableGeneratorTest.OptimizeReturnTest][suite]
+    - id: 1081
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableGeneratorTest/OptimizeReturnTest/[UnityTests][UniRx.Tests.ObservableGeneratorTest.OptimizeReturnTest(6)]
+      name: OptimizeReturnTest(6)
+      fullName: UniRx.Tests.ObservableGeneratorTest.OptimizeReturnTest(6)
+      resultStatus: 1
+      duration: 0.0003482
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1086
+      parentUniqueId: UnityTests.dll/UniRx/Tests/ObservableGeneratorTest/[UnityTests][UniRx.Tests.ObservableGeneratorTest.OptimizeReturnTest][suite]
+    - id: 1082
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableGeneratorTest/OptimizeReturnTest/[UnityTests][UniRx.Tests.ObservableGeneratorTest.OptimizeReturnTest(9)]
+      name: OptimizeReturnTest(9)
+      fullName: UniRx.Tests.ObservableGeneratorTest.OptimizeReturnTest(9)
+      resultStatus: 1
+      duration: 0.0003377
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1086
+      parentUniqueId: UnityTests.dll/UniRx/Tests/ObservableGeneratorTest/[UnityTests][UniRx.Tests.ObservableGeneratorTest.OptimizeReturnTest][suite]
+    - id: 1083
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableGeneratorTest/OptimizeReturnTest/[UnityTests][UniRx.Tests.ObservableGeneratorTest.OptimizeReturnTest(10)]
+      name: OptimizeReturnTest(10)
+      fullName: UniRx.Tests.ObservableGeneratorTest.OptimizeReturnTest(10)
+      resultStatus: 1
+      duration: 0.0003078
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1086
+      parentUniqueId: UnityTests.dll/UniRx/Tests/ObservableGeneratorTest/[UnityTests][UniRx.Tests.ObservableGeneratorTest.OptimizeReturnTest][suite]
+    - id: 1084
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableGeneratorTest/OptimizeReturnTest/[UnityTests][UniRx.Tests.ObservableGeneratorTest.OptimizeReturnTest(100)]
+      name: OptimizeReturnTest(100)
+      fullName: UniRx.Tests.ObservableGeneratorTest.OptimizeReturnTest(100)
+      resultStatus: 1
+      duration: 0.0003013
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1086
+      parentUniqueId: UnityTests.dll/UniRx/Tests/ObservableGeneratorTest/[UnityTests][UniRx.Tests.ObservableGeneratorTest.OptimizeReturnTest][suite]
+    - id: 1085
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableGeneratorTest/OptimizeReturnTest/[UnityTests][UniRx.Tests.ObservableGeneratorTest.OptimizeReturnTest(1000)]
+      name: OptimizeReturnTest(1000)
+      fullName: UniRx.Tests.ObservableGeneratorTest.OptimizeReturnTest(1000)
+      resultStatus: 1
+      duration: 0.0003003
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1086
+      parentUniqueId: UnityTests.dll/UniRx/Tests/ObservableGeneratorTest/[UnityTests][UniRx.Tests.ObservableGeneratorTest.OptimizeReturnTest][suite]
+    - id: 1071
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableGeneratorTest/[UnityTests][UniRx.Tests.ObservableGeneratorTest.Range]
+      name: Range
+      fullName: UniRx.Tests.ObservableGeneratorTest.Range
+      resultStatus: 1
+      duration: 0.0004873
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1067
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableGeneratorTest][suite]
+    - id: 1072
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableGeneratorTest/[UnityTests][UniRx.Tests.ObservableGeneratorTest.Repeat]
+      name: Repeat
+      fullName: UniRx.Tests.ObservableGeneratorTest.Repeat
+      resultStatus: 1
+      duration: 0.0047817
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1067
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableGeneratorTest][suite]
+    - id: 1073
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableGeneratorTest/[UnityTests][UniRx.Tests.ObservableGeneratorTest.Repeat2]
+      name: Repeat2
+      fullName: UniRx.Tests.ObservableGeneratorTest.Repeat2
+      resultStatus: 1
+      duration: 0.006064
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1067
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableGeneratorTest][suite]
+    - id: 1074
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableGeneratorTest/[UnityTests][UniRx.Tests.ObservableGeneratorTest.RepeatStatic]
+      name: RepeatStatic
+      fullName: UniRx.Tests.ObservableGeneratorTest.RepeatStatic
+      resultStatus: 1
+      duration: 0.0021072
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1067
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableGeneratorTest][suite]
+    - id: 1070
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableGeneratorTest/[UnityTests][UniRx.Tests.ObservableGeneratorTest.Return]
+      name: Return
+      fullName: UniRx.Tests.ObservableGeneratorTest.Return
+      resultStatus: 1
+      duration: 0.0013638
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1067
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableGeneratorTest][suite]
+    - id: 1076
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableGeneratorTest/[UnityTests][UniRx.Tests.ObservableGeneratorTest.Throw]
+      name: Throw
+      fullName: UniRx.Tests.ObservableGeneratorTest.Throw
+      resultStatus: 1
+      duration: 0.0028074
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1067
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableGeneratorTest][suite]
+    - id: 1075
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableGeneratorTest/[UnityTests][UniRx.Tests.ObservableGeneratorTest.ToObservable]
+      name: ToObservable
+      fullName: UniRx.Tests.ObservableGeneratorTest.ToObservable
+      resultStatus: 2
+      duration: 0.0067075
+      messages: "  Expected is <System.String[7]>, actual is <System.String[0]>\r\n 
+        Values differ at index [0]\r\n  Missing:  < \"DO:1\", \"1\", \"DO:10\"...
+        >"
+      output: 
+      stacktrace: 'at NUnit.Framework.CollectionAssert.AreEqual (System.Collections.IEnumerable
+        expected, System.Collections.IEnumerable actual, System.String message, System.Object[]
+        args) [0x00008] in <10b6135e63434fdba4fc6c109928ab3b>:0
+
+        at ChainingAssertion.Is[T]
+        (System.Collections.Generic.IEnumerable`1[T] actual, System.Collections.Generic.IEnumerable`1[T]
+        expected, System.String message) [0x00001] in C:\Users\Thaina\Documents\git\UniRx\Assets\Scripts\UnityTests\ChainingAssertion.Unity.cs:40
+
+        at
+        ChainingAssertion.Is[T] (System.Collections.Generic.IEnumerable`1[T] actual,
+        T[] expected) [0x00001] in C:\Users\Thaina\Documents\git\UniRx\Assets\Scripts\UnityTests\ChainingAssertion.Unity.cs:34
+
+        at
+        UniRx.Tests.ObservableGeneratorTest.ToObservable () [0x00173] in C:\Users\Thaina\Documents\git\UniRx\Assets\Scripts\UnityTests\Rx\Observable.GeneratorTest.cs:110
+
+'
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1067
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableGeneratorTest][suite]
+    - id: 1087
+      uniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservablePagingTest][suite]
+      name: ObservablePagingTest
+      fullName: UniRx.Tests.ObservablePagingTest
+      resultStatus: 1
+      duration: 24.128777
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1219
+      parentUniqueId: UnityTests.dll/UniRx/[UnityTests][UniRx.Tests][suite]
+    - id: 1088
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservablePagingTest/[UnityTests][UniRx.Tests.ObservablePagingTest.Buffer]
+      name: Buffer
+      fullName: UniRx.Tests.ObservablePagingTest.Buffer
+      resultStatus: 1
+      duration: 0.0032753
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1087
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservablePagingTest][suite]
+    - id: 1095
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservablePagingTest/[UnityTests][UniRx.Tests.ObservablePagingTest.Buffer3]
+      name: Buffer3
+      fullName: UniRx.Tests.ObservablePagingTest.Buffer3
+      resultStatus: 1
+      duration: 0.0016078
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1087
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservablePagingTest][suite]
+    - id: 1094
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservablePagingTest/[UnityTests][UniRx.Tests.ObservablePagingTest.BufferComplete2]
+      name: BufferComplete2
+      fullName: UniRx.Tests.ObservablePagingTest.BufferComplete2
+      resultStatus: 1
+      duration: 0.0005268
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1087
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservablePagingTest][suite]
+    - id: 1093
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservablePagingTest/[UnityTests][UniRx.Tests.ObservablePagingTest.BufferEmpty]
+      name: BufferEmpty
+      fullName: UniRx.Tests.ObservablePagingTest.BufferEmpty
+      resultStatus: 1
+      duration: 0.0003461
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1087
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservablePagingTest][suite]
+    - id: 1096
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservablePagingTest/[UnityTests][UniRx.Tests.ObservablePagingTest.BufferSkip]
+      name: BufferSkip
+      fullName: UniRx.Tests.ObservablePagingTest.BufferSkip
+      resultStatus: 1
+      duration: 0.0021402
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1087
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservablePagingTest][suite]
+    - id: 1089
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservablePagingTest/[UnityTests][UniRx.Tests.ObservablePagingTest.BufferTime]
+      name: BufferTime
+      fullName: UniRx.Tests.ObservablePagingTest.BufferTime
+      resultStatus: 1
+      duration: 4.003365
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1087
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservablePagingTest][suite]
+    - id: 1097
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservablePagingTest/[UnityTests][UniRx.Tests.ObservablePagingTest.BufferTimeAndCount]
+      name: BufferTimeAndCount
+      fullName: UniRx.Tests.ObservablePagingTest.BufferTimeAndCount
+      resultStatus: 1
+      duration: 9.009461
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1087
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservablePagingTest][suite]
+    - id: 1098
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservablePagingTest/[UnityTests][UniRx.Tests.ObservablePagingTest.BufferTimeAndCountTimeSide]
+      name: BufferTimeAndCountTimeSide
+      fullName: UniRx.Tests.ObservablePagingTest.BufferTimeAndCountTimeSide
+      resultStatus: 1
+      duration: 2.002496
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1087
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservablePagingTest][suite]
+    - id: 1091
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservablePagingTest/[UnityTests][UniRx.Tests.ObservablePagingTest.BufferTimeComplete]
+      name: BufferTimeComplete
+      fullName: UniRx.Tests.ObservablePagingTest.BufferTimeComplete
+      resultStatus: 1
+      duration: 4.0109873
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1087
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservablePagingTest][suite]
+    - id: 1090
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservablePagingTest/[UnityTests][UniRx.Tests.ObservablePagingTest.BufferTimeEmptyBuffer]
+      name: BufferTimeEmptyBuffer
+      fullName: UniRx.Tests.ObservablePagingTest.BufferTimeEmptyBuffer
+      resultStatus: 1
+      duration: 3.502625
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1087
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservablePagingTest][suite]
+    - id: 1092
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservablePagingTest/[UnityTests][UniRx.Tests.ObservablePagingTest.BufferTimeEmptyComplete]
+      name: BufferTimeEmptyComplete
+      fullName: UniRx.Tests.ObservablePagingTest.BufferTimeEmptyComplete
+      resultStatus: 1
+      duration: 0.0007832
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1087
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservablePagingTest][suite]
+    - id: 1099
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservablePagingTest/[UnityTests][UniRx.Tests.ObservablePagingTest.BufferWindowBoundaries]
+      name: BufferWindowBoundaries
+      fullName: UniRx.Tests.ObservablePagingTest.BufferWindowBoundaries
+      resultStatus: 1
+      duration: 0.0040183
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1087
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservablePagingTest][suite]
+    - id: 1100
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservablePagingTest/[UnityTests][UniRx.Tests.ObservablePagingTest.First]
+      name: First
+      fullName: UniRx.Tests.ObservablePagingTest.First
+      resultStatus: 1
+      duration: 0.0049457
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1087
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservablePagingTest][suite]
+    - id: 1101
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservablePagingTest/[UnityTests][UniRx.Tests.ObservablePagingTest.FirstOrDefault]
+      name: FirstOrDefault
+      fullName: UniRx.Tests.ObservablePagingTest.FirstOrDefault
+      resultStatus: 1
+      duration: 0.0041217
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1087
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservablePagingTest][suite]
+    - id: 1117
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservablePagingTest/[UnityTests][UniRx.Tests.ObservablePagingTest.GroupBy]
+      name: GroupBy
+      fullName: UniRx.Tests.ObservablePagingTest.GroupBy
+      resultStatus: 1
+      duration: 0.0086408
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1087
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservablePagingTest][suite]
+    - id: 1102
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservablePagingTest/[UnityTests][UniRx.Tests.ObservablePagingTest.Last]
+      name: Last
+      fullName: UniRx.Tests.ObservablePagingTest.Last
+      resultStatus: 1
+      duration: 0.0050644
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1087
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservablePagingTest][suite]
+    - id: 1103
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservablePagingTest/[UnityTests][UniRx.Tests.ObservablePagingTest.LastOrDefault]
+      name: LastOrDefault
+      fullName: UniRx.Tests.ObservablePagingTest.LastOrDefault
+      resultStatus: 1
+      duration: 0.0040394
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1087
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservablePagingTest][suite]
+    - id: 1113
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservablePagingTest/[UnityTests][UniRx.Tests.ObservablePagingTest.Pairwise]
+      name: Pairwise
+      fullName: UniRx.Tests.ObservablePagingTest.Pairwise
+      resultStatus: 1
+      duration: 0.0016306
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1087
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservablePagingTest][suite]
+    - id: 1114
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservablePagingTest/[UnityTests][UniRx.Tests.ObservablePagingTest.Pairwise2]
+      name: Pairwise2
+      fullName: UniRx.Tests.ObservablePagingTest.Pairwise2
+      resultStatus: 1
+      duration: 0.0047689
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1087
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservablePagingTest][suite]
+    - id: 1104
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservablePagingTest/[UnityTests][UniRx.Tests.ObservablePagingTest.Single]
+      name: Single
+      fullName: UniRx.Tests.ObservablePagingTest.Single
+      resultStatus: 1
+      duration: 0.0041684
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1087
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservablePagingTest][suite]
+    - id: 1105
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservablePagingTest/[UnityTests][UniRx.Tests.ObservablePagingTest.SingleOrDefault]
+      name: SingleOrDefault
+      fullName: UniRx.Tests.ObservablePagingTest.SingleOrDefault
+      resultStatus: 1
+      duration: 0.0039789
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1087
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservablePagingTest][suite]
+    - id: 1108
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservablePagingTest/[UnityTests][UniRx.Tests.ObservablePagingTest.Skip]
+      name: Skip
+      fullName: UniRx.Tests.ObservablePagingTest.Skip
+      resultStatus: 1
+      duration: 0.0014912
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1087
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservablePagingTest][suite]
+    - id: 1109
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservablePagingTest/[UnityTests][UniRx.Tests.ObservablePagingTest.SkipTime]
+      name: SkipTime
+      fullName: UniRx.Tests.ObservablePagingTest.SkipTime
+      resultStatus: 1
+      duration: 0.6602354
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1087
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservablePagingTest][suite]
+    - id: 1112
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservablePagingTest/[UnityTests][UniRx.Tests.ObservablePagingTest.SkipUntil]
+      name: SkipUntil
+      fullName: UniRx.Tests.ObservablePagingTest.SkipUntil
+      resultStatus: 1
+      duration: 0.0068135
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1087
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservablePagingTest][suite]
+    - id: 1110
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservablePagingTest/[UnityTests][UniRx.Tests.ObservablePagingTest.SkipWhile]
+      name: SkipWhile
+      fullName: UniRx.Tests.ObservablePagingTest.SkipWhile
+      resultStatus: 1
+      duration: 0.0050067
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1087
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservablePagingTest][suite]
+    - id: 1111
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservablePagingTest/[UnityTests][UniRx.Tests.ObservablePagingTest.SkipWhileIndex]
+      name: SkipWhileIndex
+      fullName: UniRx.Tests.ObservablePagingTest.SkipWhileIndex
+      resultStatus: 1
+      duration: 0.0050757
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1087
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservablePagingTest][suite]
+    - id: 1115
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservablePagingTest/[UnityTests][UniRx.Tests.ObservablePagingTest.TakeLast]
+      name: TakeLast
+      fullName: UniRx.Tests.ObservablePagingTest.TakeLast
+      resultStatus: 1
+      duration: 0.0095551
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1087
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservablePagingTest][suite]
+    - id: 1116
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservablePagingTest/[UnityTests][UniRx.Tests.ObservablePagingTest.TakeLastDuration]
+      name: TakeLastDuration
+      fullName: UniRx.Tests.ObservablePagingTest.TakeLastDuration
+      resultStatus: 1
+      duration: 0.820089
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1087
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservablePagingTest][suite]
+    - id: 1107
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservablePagingTest/[UnityTests][UniRx.Tests.ObservablePagingTest.TakeUntil]
+      name: TakeUntil
+      fullName: UniRx.Tests.ObservablePagingTest.TakeUntil
+      resultStatus: 1
+      duration: 0.0059574
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1087
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservablePagingTest][suite]
+    - id: 1106
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservablePagingTest/[UnityTests][UniRx.Tests.ObservablePagingTest.TakeWhile]
+      name: TakeWhile
+      fullName: UniRx.Tests.ObservablePagingTest.TakeWhile
+      resultStatus: 1
+      duration: 0.0045787
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1087
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservablePagingTest][suite]
+    - id: 1132
+      uniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableTest][suite]
+      name: ObservableTest
+      fullName: UniRx.Tests.ObservableTest
+      resultStatus: 1
+      duration: 1.0725445
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1219
+      parentUniqueId: UnityTests.dll/UniRx/[UnityTests][UniRx.Tests][suite]
+    - id: 1143
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableTest/[UnityTests][UniRx.Tests.ObservableTest.DefaultIfEmpty]
+      name: DefaultIfEmpty
+      fullName: UniRx.Tests.ObservableTest.DefaultIfEmpty
+      resultStatus: 1
+      duration: 0.0028395
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1132
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableTest][suite]
+    - id: 1142
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableTest/[UnityTests][UniRx.Tests.ObservableTest.Dematerialize]
+      name: Dematerialize
+      fullName: UniRx.Tests.ObservableTest.Dematerialize
+      resultStatus: 1
+      duration: 0.0054035
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1132
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableTest][suite]
+    - id: 1137
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableTest/[UnityTests][UniRx.Tests.ObservableTest.Distinct]
+      name: Distinct
+      fullName: UniRx.Tests.ObservableTest.Distinct
+      resultStatus: 1
+      duration: 0.0043198
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1132
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableTest][suite]
+    - id: 1136
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableTest/[UnityTests][UniRx.Tests.ObservableTest.DistinctUntilChanged]
+      name: DistinctUntilChanged
+      fullName: UniRx.Tests.ObservableTest.DistinctUntilChanged
+      resultStatus: 1
+      duration: 0.0074025
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1132
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableTest][suite]
+    - id: 1145
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableTest/[UnityTests][UniRx.Tests.ObservableTest.ForEachAsync]
+      name: ForEachAsync
+      fullName: UniRx.Tests.ObservableTest.ForEachAsync
+      resultStatus: 1
+      duration: 0.0049921
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1132
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableTest][suite]
+    - id: 1144
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableTest/[UnityTests][UniRx.Tests.ObservableTest.IgnoreElements]
+      name: IgnoreElements
+      fullName: UniRx.Tests.ObservableTest.IgnoreElements
+      resultStatus: 1
+      duration: 0.0024861
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1132
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableTest][suite]
+    - id: 1141
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableTest/[UnityTests][UniRx.Tests.ObservableTest.Materialize]
+      name: Materialize
+      fullName: UniRx.Tests.ObservableTest.Materialize
+      resultStatus: 1
+      duration: 0.0009283
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1132
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableTest][suite]
+    - id: 1139
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableTest/[UnityTests][UniRx.Tests.ObservableTest.Select]
+      name: Select
+      fullName: UniRx.Tests.ObservableTest.Select
+      resultStatus: 1
+      duration: 0.0069971
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1132
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableTest][suite]
+    - id: 1138
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableTest/[UnityTests][UniRx.Tests.ObservableTest.SelectMany]
+      name: SelectMany
+      fullName: UniRx.Tests.ObservableTest.SelectMany
+      resultStatus: 1
+      duration: 0.0047641
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1132
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableTest][suite]
+    - id: 1133
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableTest/[UnityTests][UniRx.Tests.ObservableTest.ToArray]
+      name: ToArray
+      fullName: UniRx.Tests.ObservableTest.ToArray
+      resultStatus: 1
+      duration: 0.0006996
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1132
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableTest][suite]
+    - id: 1134
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableTest/[UnityTests][UniRx.Tests.ObservableTest.ToArray_Dispose]
+      name: ToArray_Dispose
+      fullName: UniRx.Tests.ObservableTest.ToArray_Dispose
+      resultStatus: 1
+      duration: 0.0009189
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1132
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableTest][suite]
+    - id: 1135
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableTest/[UnityTests][UniRx.Tests.ObservableTest.Wait]
+      name: Wait
+      fullName: UniRx.Tests.ObservableTest.Wait
+      resultStatus: 1
+      duration: 1.0017787
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1132
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableTest][suite]
+    - id: 1140
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableTest/[UnityTests][UniRx.Tests.ObservableTest.Where]
+      name: Where
+      fullName: UniRx.Tests.ObservableTest.Where
+      resultStatus: 1
+      duration: 0.012119
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1132
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableTest][suite]
+    - id: 1118
+      uniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableTimeTest][suite]
+      name: ObservableTimeTest
+      fullName: UniRx.Tests.ObservableTimeTest
+      resultStatus: 1
+      duration: 58.506275
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1219
+      parentUniqueId: UnityTests.dll/UniRx/[UnityTests][UniRx.Tests][suite]
+    - id: 1124
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableTimeTest/[UnityTests][UniRx.Tests.ObservableTimeTest.DelayTest]
+      name: DelayTest
+      fullName: UniRx.Tests.ObservableTimeTest.DelayTest
+      resultStatus: 1
+      duration: 1.0065633
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1118
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableTimeTest][suite]
+    - id: 1125
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableTimeTest/[UnityTests][UniRx.Tests.ObservableTimeTest.SampleTest]
+      name: SampleTest
+      fullName: UniRx.Tests.ObservableTimeTest.SampleTest
+      resultStatus: 1
+      duration: 9.61043
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1118
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableTimeTest][suite]
+    - id: 1129
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableTimeTest/[UnityTests][UniRx.Tests.ObservableTimeTest.ThrottleFirstTest]
+      name: ThrottleFirstTest
+      fullName: UniRx.Tests.ObservableTimeTest.ThrottleFirstTest
+      resultStatus: 1
+      duration: 5.612429
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1118
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableTimeTest][suite]
+    - id: 1128
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableTimeTest/[UnityTests][UniRx.Tests.ObservableTimeTest.ThrottleTest]
+      name: ThrottleTest
+      fullName: UniRx.Tests.ObservableTimeTest.ThrottleTest
+      resultStatus: 1
+      duration: 14.011653
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1118
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableTimeTest][suite]
+    - id: 1131
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableTimeTest/[UnityTests][UniRx.Tests.ObservableTimeTest.TimeInterval]
+      name: TimeInterval
+      fullName: UniRx.Tests.ObservableTimeTest.TimeInterval
+      resultStatus: 1
+      duration: 2.6057675
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1118
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableTimeTest][suite]
+    - id: 1126
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableTimeTest/[UnityTests][UniRx.Tests.ObservableTimeTest.TimeoutTest]
+      name: TimeoutTest
+      fullName: UniRx.Tests.ObservableTimeTest.TimeoutTest
+      resultStatus: 1
+      duration: 2.5094364
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1118
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableTimeTest][suite]
+    - id: 1127
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableTimeTest/[UnityTests][UniRx.Tests.ObservableTimeTest.TimeoutTestOffset]
+      name: TimeoutTestOffset
+      fullName: UniRx.Tests.ObservableTimeTest.TimeoutTestOffset
+      resultStatus: 1
+      duration: 3.5031977
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1118
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableTimeTest][suite]
+    - id: 1121
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableTimeTest/[UnityTests][UniRx.Tests.ObservableTimeTest.TimerTestDueTime]
+      name: TimerTestDueTime
+      fullName: UniRx.Tests.ObservableTimeTest.TimerTestDueTime
+      resultStatus: 1
+      duration: 4.004813
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1118
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableTimeTest][suite]
+    - id: 1120
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableTimeTest/[UnityTests][UniRx.Tests.ObservableTimeTest.TimerTestDueTimePeriodic]
+      name: TimerTestDueTimePeriodic
+      fullName: UniRx.Tests.ObservableTimeTest.TimerTestDueTimePeriodic
+      resultStatus: 1
+      duration: 4.0017915
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1118
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableTimeTest][suite]
+    - id: 1123
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableTimeTest/[UnityTests][UniRx.Tests.ObservableTimeTest.TimerTestNonPeriodic]
+      name: TimerTestNonPeriodic
+      fullName: UniRx.Tests.ObservableTimeTest.TimerTestNonPeriodic
+      resultStatus: 1
+      duration: 4.014346
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1118
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableTimeTest][suite]
+    - id: 1122
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableTimeTest/[UnityTests][UniRx.Tests.ObservableTimeTest.TimerTestOneTime]
+      name: TimerTestOneTime
+      fullName: UniRx.Tests.ObservableTimeTest.TimerTestOneTime
+      resultStatus: 1
+      duration: 2.0065067
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1118
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableTimeTest][suite]
+    - id: 1119
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableTimeTest/[UnityTests][UniRx.Tests.ObservableTimeTest.TimerTestPeriodicInterval]
+      name: TimerTestPeriodicInterval
+      fullName: UniRx.Tests.ObservableTimeTest.TimerTestPeriodicInterval
+      resultStatus: 1
+      duration: 3.0023322
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1118
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableTimeTest][suite]
+    - id: 1130
+      uniqueId: UnityTests.dll/UniRx/Tests/ObservableTimeTest/[UnityTests][UniRx.Tests.ObservableTimeTest.Timestamp]
+      name: Timestamp
+      fullName: UniRx.Tests.ObservableTimeTest.Timestamp
+      resultStatus: 1
+      duration: 2.6007533
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1118
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ObservableTimeTest][suite]
+    - id: 1220
+      uniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.Operators][suite]
+      name: Operators
+      fullName: UniRx.Tests.Operators
+      resultStatus: 1
+      duration: 4.73407
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1219
+      parentUniqueId: UnityTests.dll/UniRx/[UnityTests][UniRx.Tests][suite]
+    - id: 1172
+      uniqueId: UnityTests.dll/UniRx/Tests/Operators/[UnityTests][UniRx.Tests.Operators.AggregateTest][suite]
+      name: AggregateTest
+      fullName: UniRx.Tests.Operators.AggregateTest
+      resultStatus: 1
+      duration: 0.0169367
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1220
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.Operators][suite]
+    - id: 1174
+      uniqueId: UnityTests.dll/UniRx/Tests/Operators/AggregateTest/[UnityTests][UniRx.Tests.Operators.AggregateTest.Aggregate]
+      name: Aggregate
+      fullName: UniRx.Tests.Operators.AggregateTest.Aggregate
+      resultStatus: 1
+      duration: 0.0111279
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1172
+      parentUniqueId: UnityTests.dll/UniRx/Tests/Operators/[UnityTests][UniRx.Tests.Operators.AggregateTest][suite]
+    - id: 1173
+      uniqueId: UnityTests.dll/UniRx/Tests/Operators/AggregateTest/[UnityTests][UniRx.Tests.Operators.AggregateTest.Scan]
+      name: Scan
+      fullName: UniRx.Tests.Operators.AggregateTest.Scan
+      resultStatus: 1
+      duration: 0.0022042
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1172
+      parentUniqueId: UnityTests.dll/UniRx/Tests/Operators/[UnityTests][UniRx.Tests.Operators.AggregateTest][suite]
+    - id: 1175
+      uniqueId: UnityTests.dll/UniRx/Tests/Operators/[UnityTests][UniRx.Tests.Operators.ContinueWithTest][suite]
+      name: ContinueWithTest
+      fullName: UniRx.Tests.Operators.ContinueWithTest
+      resultStatus: 1
+      duration: 0.5126407
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1220
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.Operators][suite]
+    - id: 1176
+      uniqueId: UnityTests.dll/UniRx/Tests/Operators/ContinueWithTest/[UnityTests][UniRx.Tests.Operators.ContinueWithTest.ContinueWith]
+      name: ContinueWith
+      fullName: UniRx.Tests.Operators.ContinueWithTest.ContinueWith
+      resultStatus: 1
+      duration: 0.0026029
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1175
+      parentUniqueId: UnityTests.dll/UniRx/Tests/Operators/[UnityTests][UniRx.Tests.Operators.ContinueWithTest][suite]
+    - id: 1177
+      uniqueId: UnityTests.dll/UniRx/Tests/Operators/ContinueWithTest/[UnityTests][UniRx.Tests.Operators.ContinueWithTest.ContinueWith2]
+      name: ContinueWith2
+      fullName: UniRx.Tests.Operators.ContinueWithTest.ContinueWith2
+      resultStatus: 1
+      duration: 0.5020566
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1175
+      parentUniqueId: UnityTests.dll/UniRx/Tests/Operators/[UnityTests][UniRx.Tests.Operators.ContinueWithTest][suite]
+    - id: 1178
+      uniqueId: UnityTests.dll/UniRx/Tests/Operators/[UnityTests][UniRx.Tests.Operators.ConversionTest][suite]
+      name: ConversionTest
+      fullName: UniRx.Tests.Operators.ConversionTest
+      resultStatus: 1
+      duration: 0.0266203
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1220
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.Operators][suite]
+    - id: 1179
+      uniqueId: UnityTests.dll/UniRx/Tests/Operators/ConversionTest/[UnityTests][UniRx.Tests.Operators.ConversionTest.AsObservable]
+      name: AsObservable
+      fullName: UniRx.Tests.Operators.ConversionTest.AsObservable
+      resultStatus: 1
+      duration: 0.0005769
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1178
+      parentUniqueId: UnityTests.dll/UniRx/Tests/Operators/[UnityTests][UniRx.Tests.Operators.ConversionTest][suite]
+    - id: 1184
+      uniqueId: UnityTests.dll/UniRx/Tests/Operators/ConversionTest/[UnityTests][UniRx.Tests.Operators.ConversionTest.AsSingleUnitObservable]
+      name: AsSingleUnitObservable
+      fullName: UniRx.Tests.Operators.ConversionTest.AsSingleUnitObservable
+      resultStatus: 1
+      duration: 0.0019002
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1178
+      parentUniqueId: UnityTests.dll/UniRx/Tests/Operators/[UnityTests][UniRx.Tests.Operators.ConversionTest][suite]
+    - id: 1180
+      uniqueId: UnityTests.dll/UniRx/Tests/Operators/ConversionTest/[UnityTests][UniRx.Tests.Operators.ConversionTest.AsUnitObservable]
+      name: AsUnitObservable
+      fullName: UniRx.Tests.Operators.ConversionTest.AsUnitObservable
+      resultStatus: 1
+      duration: 0.0052147
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1178
+      parentUniqueId: UnityTests.dll/UniRx/Tests/Operators/[UnityTests][UniRx.Tests.Operators.ConversionTest][suite]
+    - id: 1182
+      uniqueId: UnityTests.dll/UniRx/Tests/Operators/ConversionTest/[UnityTests][UniRx.Tests.Operators.ConversionTest.Cast]
+      name: Cast
+      fullName: UniRx.Tests.Operators.ConversionTest.Cast
+      resultStatus: 1
+      duration: 0.0035655
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1178
+      parentUniqueId: UnityTests.dll/UniRx/Tests/Operators/[UnityTests][UniRx.Tests.Operators.ConversionTest][suite]
+    - id: 1183
+      uniqueId: UnityTests.dll/UniRx/Tests/Operators/ConversionTest/[UnityTests][UniRx.Tests.Operators.ConversionTest.OfType]
+      name: OfType
+      fullName: UniRx.Tests.Operators.ConversionTest.OfType
+      resultStatus: 1
+      duration: 0.0035613
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1178
+      parentUniqueId: UnityTests.dll/UniRx/Tests/Operators/[UnityTests][UniRx.Tests.Operators.ConversionTest][suite]
+    - id: 1181
+      uniqueId: UnityTests.dll/UniRx/Tests/Operators/ConversionTest/[UnityTests][UniRx.Tests.Operators.ConversionTest.ToObservable]
+      name: ToObservable
+      fullName: UniRx.Tests.Operators.ConversionTest.ToObservable
+      resultStatus: 1
+      duration: 0.00149
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1178
+      parentUniqueId: UnityTests.dll/UniRx/Tests/Operators/[UnityTests][UniRx.Tests.Operators.ConversionTest][suite]
+    - id: 1185
+      uniqueId: UnityTests.dll/UniRx/Tests/Operators/[UnityTests][UniRx.Tests.Operators.DoTest][suite]
+      name: DoTest
+      fullName: UniRx.Tests.Operators.DoTest
+      resultStatus: 1
+      duration: 0.0335161
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1220
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.Operators][suite]
+    - id: 1186
+      uniqueId: UnityTests.dll/UniRx/Tests/Operators/DoTest/[UnityTests][UniRx.Tests.Operators.DoTest.Do]
+      name: Do
+      fullName: UniRx.Tests.Operators.DoTest.Do
+      resultStatus: 1
+      duration: 0.0063366
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1185
+      parentUniqueId: UnityTests.dll/UniRx/Tests/Operators/[UnityTests][UniRx.Tests.Operators.DoTest][suite]
+    - id: 1187
+      uniqueId: UnityTests.dll/UniRx/Tests/Operators/DoTest/[UnityTests][UniRx.Tests.Operators.DoTest.DoObserver]
+      name: DoObserver
+      fullName: UniRx.Tests.Operators.DoTest.DoObserver
+      resultStatus: 1
+      duration: 0.0047004
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1185
+      parentUniqueId: UnityTests.dll/UniRx/Tests/Operators/[UnityTests][UniRx.Tests.Operators.DoTest][suite]
+    - id: 1192
+      uniqueId: UnityTests.dll/UniRx/Tests/Operators/DoTest/[UnityTests][UniRx.Tests.Operators.DoTest.DoOnCancel]
+      name: DoOnCancel
+      fullName: UniRx.Tests.Operators.DoTest.DoOnCancel
+      resultStatus: 1
+      duration: 0.0036081
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1185
+      parentUniqueId: UnityTests.dll/UniRx/Tests/Operators/[UnityTests][UniRx.Tests.Operators.DoTest][suite]
+    - id: 1189
+      uniqueId: UnityTests.dll/UniRx/Tests/Operators/DoTest/[UnityTests][UniRx.Tests.Operators.DoTest.DoOnCompleted]
+      name: DoOnCompleted
+      fullName: UniRx.Tests.Operators.DoTest.DoOnCompleted
+      resultStatus: 1
+      duration: 0.0017981
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1185
+      parentUniqueId: UnityTests.dll/UniRx/Tests/Operators/[UnityTests][UniRx.Tests.Operators.DoTest][suite]
+    - id: 1188
+      uniqueId: UnityTests.dll/UniRx/Tests/Operators/DoTest/[UnityTests][UniRx.Tests.Operators.DoTest.DoOnError]
+      name: DoOnError
+      fullName: UniRx.Tests.Operators.DoTest.DoOnError
+      resultStatus: 1
+      duration: 0.0015185
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1185
+      parentUniqueId: UnityTests.dll/UniRx/Tests/Operators/[UnityTests][UniRx.Tests.Operators.DoTest][suite]
+    - id: 1191
+      uniqueId: UnityTests.dll/UniRx/Tests/Operators/DoTest/[UnityTests][UniRx.Tests.Operators.DoTest.DoOnSubscribe]
+      name: DoOnSubscribe
+      fullName: UniRx.Tests.Operators.DoTest.DoOnSubscribe
+      resultStatus: 1
+      duration: 0.001859
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1185
+      parentUniqueId: UnityTests.dll/UniRx/Tests/Operators/[UnityTests][UniRx.Tests.Operators.DoTest][suite]
+    - id: 1190
+      uniqueId: UnityTests.dll/UniRx/Tests/Operators/DoTest/[UnityTests][UniRx.Tests.Operators.DoTest.DoOnTerminate]
+      name: DoOnTerminate
+      fullName: UniRx.Tests.Operators.DoTest.DoOnTerminate
+      resultStatus: 1
+      duration: 0.0014939
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1185
+      parentUniqueId: UnityTests.dll/UniRx/Tests/Operators/[UnityTests][UniRx.Tests.Operators.DoTest][suite]
+    - id: 1193
+      uniqueId: UnityTests.dll/UniRx/Tests/Operators/[UnityTests][UniRx.Tests.Operators.RangeTest][suite]
+      name: RangeTest
+      fullName: UniRx.Tests.Operators.RangeTest
+      resultStatus: 1
+      duration: 0.010158
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1220
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.Operators][suite]
+    - id: 1194
+      uniqueId: UnityTests.dll/UniRx/Tests/Operators/RangeTest/[UnityTests][UniRx.Tests.Operators.RangeTest.Range]
+      name: Range
+      fullName: UniRx.Tests.Operators.RangeTest.Range
+      resultStatus: 1
+      duration: 0.0014955
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1193
+      parentUniqueId: UnityTests.dll/UniRx/Tests/Operators/[UnityTests][UniRx.Tests.Operators.RangeTest][suite]
+    - id: 1195
+      uniqueId: UnityTests.dll/UniRx/Tests/Operators/[UnityTests][UniRx.Tests.Operators.SelectMany][suite]
+      name: SelectMany
+      fullName: UniRx.Tests.Operators.SelectMany
+      resultStatus: 1
+      duration: 0.0535827
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1220
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.Operators][suite]
+    - id: 1200
+      uniqueId: UnityTests.dll/UniRx/Tests/Operators/SelectMany/[UnityTests][UniRx.Tests.Operators.SelectMany.ResultSelector]
+      name: ResultSelector
+      fullName: UniRx.Tests.Operators.SelectMany.ResultSelector
+      resultStatus: 1
+      duration: 0.0078249
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1195
+      parentUniqueId: UnityTests.dll/UniRx/Tests/Operators/[UnityTests][UniRx.Tests.Operators.SelectMany][suite]
+    - id: 1202
+      uniqueId: UnityTests.dll/UniRx/Tests/Operators/SelectMany/[UnityTests][UniRx.Tests.Operators.SelectMany.ResultSelectorEnumerable]
+      name: ResultSelectorEnumerable
+      fullName: UniRx.Tests.Operators.SelectMany.ResultSelectorEnumerable
+      resultStatus: 1
+      duration: 0.0031659
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1195
+      parentUniqueId: UnityTests.dll/UniRx/Tests/Operators/[UnityTests][UniRx.Tests.Operators.SelectMany][suite]
+    - id: 1203
+      uniqueId: UnityTests.dll/UniRx/Tests/Operators/SelectMany/[UnityTests][UniRx.Tests.Operators.SelectMany.ResultSelectorEnumerableWithIndex]
+      name: ResultSelectorEnumerableWithIndex
+      fullName: UniRx.Tests.Operators.SelectMany.ResultSelectorEnumerableWithIndex
+      resultStatus: 1
+      duration: 0.0051149
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1195
+      parentUniqueId: UnityTests.dll/UniRx/Tests/Operators/[UnityTests][UniRx.Tests.Operators.SelectMany][suite]
+    - id: 1201
+      uniqueId: UnityTests.dll/UniRx/Tests/Operators/SelectMany/[UnityTests][UniRx.Tests.Operators.SelectMany.ResultSelectorWithIndex]
+      name: ResultSelectorWithIndex
+      fullName: UniRx.Tests.Operators.SelectMany.ResultSelectorWithIndex
+      resultStatus: 1
+      duration: 0.0107486
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1195
+      parentUniqueId: UnityTests.dll/UniRx/Tests/Operators/[UnityTests][UniRx.Tests.Operators.SelectMany][suite]
+    - id: 1196
+      uniqueId: UnityTests.dll/UniRx/Tests/Operators/SelectMany/[UnityTests][UniRx.Tests.Operators.SelectMany.Selector]
+      name: Selector
+      fullName: UniRx.Tests.Operators.SelectMany.Selector
+      resultStatus: 1
+      duration: 0.0079959
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1195
+      parentUniqueId: UnityTests.dll/UniRx/Tests/Operators/[UnityTests][UniRx.Tests.Operators.SelectMany][suite]
+    - id: 1198
+      uniqueId: UnityTests.dll/UniRx/Tests/Operators/SelectMany/[UnityTests][UniRx.Tests.Operators.SelectMany.SelectorEnumerable]
+      name: SelectorEnumerable
+      fullName: UniRx.Tests.Operators.SelectMany.SelectorEnumerable
+      resultStatus: 1
+      duration: 0.0031588
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1195
+      parentUniqueId: UnityTests.dll/UniRx/Tests/Operators/[UnityTests][UniRx.Tests.Operators.SelectMany][suite]
+    - id: 1199
+      uniqueId: UnityTests.dll/UniRx/Tests/Operators/SelectMany/[UnityTests][UniRx.Tests.Operators.SelectMany.SelectorEnumerableWithIndex]
+      name: SelectorEnumerableWithIndex
+      fullName: UniRx.Tests.Operators.SelectMany.SelectorEnumerableWithIndex
+      resultStatus: 1
+      duration: 0.0026953
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1195
+      parentUniqueId: UnityTests.dll/UniRx/Tests/Operators/[UnityTests][UniRx.Tests.Operators.SelectMany][suite]
+    - id: 1197
+      uniqueId: UnityTests.dll/UniRx/Tests/Operators/SelectMany/[UnityTests][UniRx.Tests.Operators.SelectMany.SelectorWithIndex]
+      name: SelectorWithIndex
+      fullName: UniRx.Tests.Operators.SelectMany.SelectorWithIndex
+      resultStatus: 1
+      duration: 0.004358
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1195
+      parentUniqueId: UnityTests.dll/UniRx/Tests/Operators/[UnityTests][UniRx.Tests.Operators.SelectMany][suite]
+    - id: 1204
+      uniqueId: UnityTests.dll/UniRx/Tests/Operators/[UnityTests][UniRx.Tests.Operators.TakeTest][suite]
+      name: TakeTest
+      fullName: UniRx.Tests.Operators.TakeTest
+      resultStatus: 1
+      duration: 0.0112681
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1220
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.Operators][suite]
+    - id: 1205
+      uniqueId: UnityTests.dll/UniRx/Tests/Operators/TakeTest/[UnityTests][UniRx.Tests.Operators.TakeTest.TakeCount]
+      name: TakeCount
+      fullName: UniRx.Tests.Operators.TakeTest.TakeCount
+      resultStatus: 1
+      duration: 0.0015197
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1204
+      parentUniqueId: UnityTests.dll/UniRx/Tests/Operators/[UnityTests][UniRx.Tests.Operators.TakeTest][suite]
+    - id: 1206
+      uniqueId: UnityTests.dll/UniRx/Tests/Operators/[UnityTests][UniRx.Tests.Operators.ToTest][suite]
+      name: ToTest
+      fullName: UniRx.Tests.Operators.ToTest
+      resultStatus: 1
+      duration: 0.0169564
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1220
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.Operators][suite]
+    - id: 1207
+      uniqueId: UnityTests.dll/UniRx/Tests/Operators/ToTest/[UnityTests][UniRx.Tests.Operators.ToTest.ToArray]
+      name: ToArray
+      fullName: UniRx.Tests.Operators.ToTest.ToArray
+      resultStatus: 1
+      duration: 0.0009831
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1206
+      parentUniqueId: UnityTests.dll/UniRx/Tests/Operators/[UnityTests][UniRx.Tests.Operators.ToTest][suite]
+    - id: 1208
+      uniqueId: UnityTests.dll/UniRx/Tests/Operators/ToTest/[UnityTests][UniRx.Tests.Operators.ToTest.ToList]
+      name: ToList
+      fullName: UniRx.Tests.Operators.ToTest.ToList
+      resultStatus: 1
+      duration: 0.0044579
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1206
+      parentUniqueId: UnityTests.dll/UniRx/Tests/Operators/[UnityTests][UniRx.Tests.Operators.ToTest][suite]
+    - id: 1209
+      uniqueId: UnityTests.dll/UniRx/Tests/Operators/[UnityTests][UniRx.Tests.Operators.WhenAllTest][suite]
+      name: WhenAllTest
+      fullName: UniRx.Tests.Operators.WhenAllTest
+      resultStatus: 1
+      duration: 4.038415
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1220
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.Operators][suite]
+    - id: 1211
+      uniqueId: UnityTests.dll/UniRx/Tests/Operators/WhenAllTest/[UnityTests][UniRx.Tests.Operators.WhenAllTest.WhenAll]
+      name: WhenAll
+      fullName: UniRx.Tests.Operators.WhenAllTest.WhenAll
+      resultStatus: 1
+      duration: 1.0041645
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1209
+      parentUniqueId: UnityTests.dll/UniRx/Tests/Operators/[UnityTests][UniRx.Tests.Operators.WhenAllTest][suite]
+    - id: 1210
+      uniqueId: UnityTests.dll/UniRx/Tests/Operators/WhenAllTest/[UnityTests][UniRx.Tests.Operators.WhenAllTest.WhenAllEmpty]
+      name: WhenAllEmpty
+      fullName: UniRx.Tests.Operators.WhenAllTest.WhenAllEmpty
+      resultStatus: 1
+      duration: 0.0057372
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1209
+      parentUniqueId: UnityTests.dll/UniRx/Tests/Operators/[UnityTests][UniRx.Tests.Operators.WhenAllTest][suite]
+    - id: 1212
+      uniqueId: UnityTests.dll/UniRx/Tests/Operators/WhenAllTest/[UnityTests][UniRx.Tests.Operators.WhenAllTest.WhenAllEnumerable]
+      name: WhenAllEnumerable
+      fullName: UniRx.Tests.Operators.WhenAllTest.WhenAllEnumerable
+      resultStatus: 1
+      duration: 1.002363
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1209
+      parentUniqueId: UnityTests.dll/UniRx/Tests/Operators/[UnityTests][UniRx.Tests.Operators.WhenAllTest][suite]
+    - id: 1214
+      uniqueId: UnityTests.dll/UniRx/Tests/Operators/WhenAllTest/[UnityTests][UniRx.Tests.Operators.WhenAllTest.WhenAllUnit]
+      name: WhenAllUnit
+      fullName: UniRx.Tests.Operators.WhenAllTest.WhenAllUnit
+      resultStatus: 1
+      duration: 1.0071063
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1209
+      parentUniqueId: UnityTests.dll/UniRx/Tests/Operators/[UnityTests][UniRx.Tests.Operators.WhenAllTest][suite]
+    - id: 1213
+      uniqueId: UnityTests.dll/UniRx/Tests/Operators/WhenAllTest/[UnityTests][UniRx.Tests.Operators.WhenAllTest.WhenAllUnitEmpty]
+      name: WhenAllUnitEmpty
+      fullName: UniRx.Tests.Operators.WhenAllTest.WhenAllUnitEmpty
+      resultStatus: 1
+      duration: 0.0036841
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1209
+      parentUniqueId: UnityTests.dll/UniRx/Tests/Operators/[UnityTests][UniRx.Tests.Operators.WhenAllTest][suite]
+    - id: 1215
+      uniqueId: UnityTests.dll/UniRx/Tests/Operators/WhenAllTest/[UnityTests][UniRx.Tests.Operators.WhenAllTest.WhenAllUnitEnumerable]
+      name: WhenAllUnitEnumerable
+      fullName: UniRx.Tests.Operators.WhenAllTest.WhenAllUnitEnumerable
+      resultStatus: 1
+      duration: 1.001351
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1209
+      parentUniqueId: UnityTests.dll/UniRx/Tests/Operators/[UnityTests][UniRx.Tests.Operators.WhenAllTest][suite]
+    - id: 1146
+      uniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.QueueWorkerTest][suite]
+      name: QueueWorkerTest
+      fullName: UniRx.Tests.QueueWorkerTest
+      resultStatus: 1
+      duration: 0.0152525
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1219
+      parentUniqueId: UnityTests.dll/UniRx/[UnityTests][UniRx.Tests][suite]
+    - id: 1147
+      uniqueId: UnityTests.dll/UniRx/Tests/QueueWorkerTest/[UnityTests][UniRx.Tests.QueueWorkerTest.Enq]
+      name: Enq
+      fullName: UniRx.Tests.QueueWorkerTest.Enq
+      resultStatus: 1
+      duration: 0.005228
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1146
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.QueueWorkerTest][suite]
+    - id: 1148
+      uniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ReactivePropertyTest][suite]
+      name: ReactivePropertyTest
+      fullName: UniRx.Tests.ReactivePropertyTest
+      resultStatus: 1
+      duration: 0.0253609
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1219
+      parentUniqueId: UnityTests.dll/UniRx/[UnityTests][UniRx.Tests][suite]
+    - id: 1150
+      uniqueId: UnityTests.dll/UniRx/Tests/ReactivePropertyTest/[UnityTests][UniRx.Tests.ReactivePropertyTest.ClassType]
+      name: ClassType
+      fullName: UniRx.Tests.ReactivePropertyTest.ClassType
+      resultStatus: 1
+      duration: 0.0039068
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1148
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ReactivePropertyTest][suite]
+    - id: 1153
+      uniqueId: UnityTests.dll/UniRx/Tests/ReactivePropertyTest/[UnityTests][UniRx.Tests.ReactivePropertyTest.FinishedSourceToReadOnlyReactiveProperty]
+      name: FinishedSourceToReadOnlyReactiveProperty
+      fullName: UniRx.Tests.ReactivePropertyTest.FinishedSourceToReadOnlyReactiveProperty
+      resultStatus: 1
+      duration: 0.0023577
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1148
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ReactivePropertyTest][suite]
+    - id: 1152
+      uniqueId: UnityTests.dll/UniRx/Tests/ReactivePropertyTest/[UnityTests][UniRx.Tests.ReactivePropertyTest.ToReadOnlyReactivePropertyClassType]
+      name: ToReadOnlyReactivePropertyClassType
+      fullName: UniRx.Tests.ReactivePropertyTest.ToReadOnlyReactivePropertyClassType
+      resultStatus: 1
+      duration: 0.0031747
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1148
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ReactivePropertyTest][suite]
+    - id: 1151
+      uniqueId: UnityTests.dll/UniRx/Tests/ReactivePropertyTest/[UnityTests][UniRx.Tests.ReactivePropertyTest.ToReadOnlyReactivePropertyValueType]
+      name: ToReadOnlyReactivePropertyValueType
+      fullName: UniRx.Tests.ReactivePropertyTest.ToReadOnlyReactivePropertyValueType
+      resultStatus: 1
+      duration: 0.0018744
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1148
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ReactivePropertyTest][suite]
+    - id: 1149
+      uniqueId: UnityTests.dll/UniRx/Tests/ReactivePropertyTest/[UnityTests][UniRx.Tests.ReactivePropertyTest.ValueType]
+      name: ValueType
+      fullName: UniRx.Tests.ReactivePropertyTest.ValueType
+      resultStatus: 1
+      duration: 0.0012367
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1148
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ReactivePropertyTest][suite]
+    - id: 1154
+      uniqueId: UnityTests.dll/UniRx/Tests/ReactivePropertyTest/[UnityTests][UniRx.Tests.ReactivePropertyTest.WithLastTest]
+      name: WithLastTest
+      fullName: UniRx.Tests.ReactivePropertyTest.WithLastTest
+      resultStatus: 1
+      duration: 0.0044103
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1148
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.ReactivePropertyTest][suite]
+    - id: 1155
+      uniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.SchedulerTest][suite]
+      name: SchedulerTest
+      fullName: UniRx.Tests.SchedulerTest
+      resultStatus: 1
+      duration: 4.0109215
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1219
+      parentUniqueId: UnityTests.dll/UniRx/[UnityTests][UniRx.Tests][suite]
+    - id: 1156
+      uniqueId: UnityTests.dll/UniRx/Tests/SchedulerTest/[UnityTests][UniRx.Tests.SchedulerTest.CurrentThread]
+      name: CurrentThread
+      fullName: UniRx.Tests.SchedulerTest.CurrentThread
+      resultStatus: 1
+      duration: 0.0012824
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1155
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.SchedulerTest][suite]
+    - id: 1157
+      uniqueId: UnityTests.dll/UniRx/Tests/SchedulerTest/[UnityTests][UniRx.Tests.SchedulerTest.CurrentThread2]
+      name: CurrentThread2
+      fullName: UniRx.Tests.SchedulerTest.CurrentThread2
+      resultStatus: 1
+      duration: 3.0008938
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1155
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.SchedulerTest][suite]
+    - id: 1158
+      uniqueId: UnityTests.dll/UniRx/Tests/SchedulerTest/[UnityTests][UniRx.Tests.SchedulerTest.CurrentThread3]
+      name: CurrentThread3
+      fullName: UniRx.Tests.SchedulerTest.CurrentThread3
+      resultStatus: 1
+      duration: 1.0003486
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1155
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.SchedulerTest][suite]
+    - id: 1159
+      uniqueId: UnityTests.dll/UniRx/Tests/SchedulerTest/[UnityTests][UniRx.Tests.SchedulerTest.Immediate]
+      name: Immediate
+      fullName: UniRx.Tests.SchedulerTest.Immediate
+      resultStatus: 1
+      duration: 0.0006649
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1155
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.SchedulerTest][suite]
+    - id: 1160
+      uniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.SelectWhereOptimizeTest][suite]
+      name: SelectWhereOptimizeTest
+      fullName: UniRx.Tests.SelectWhereOptimizeTest
+      resultStatus: 1
+      duration: 0.019259
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1219
+      parentUniqueId: UnityTests.dll/UniRx/[UnityTests][UniRx.Tests][suite]
+    - id: 1161
+      uniqueId: UnityTests.dll/UniRx/Tests/SelectWhereOptimizeTest/[UnityTests][UniRx.Tests.SelectWhereOptimizeTest.SelectSelect]
+      name: SelectSelect
+      fullName: UniRx.Tests.SelectWhereOptimizeTest.SelectSelect
+      resultStatus: 1
+      duration: 0.0003847
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1160
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.SelectWhereOptimizeTest][suite]
+    - id: 1163
+      uniqueId: UnityTests.dll/UniRx/Tests/SelectWhereOptimizeTest/[UnityTests][UniRx.Tests.SelectWhereOptimizeTest.SelectWhere]
+      name: SelectWhere
+      fullName: UniRx.Tests.SelectWhereOptimizeTest.SelectWhere
+      resultStatus: 1
+      duration: 0.001791
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1160
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.SelectWhereOptimizeTest][suite]
+    - id: 1164
+      uniqueId: UnityTests.dll/UniRx/Tests/SelectWhereOptimizeTest/[UnityTests][UniRx.Tests.SelectWhereOptimizeTest.WhereSelect]
+      name: WhereSelect
+      fullName: UniRx.Tests.SelectWhereOptimizeTest.WhereSelect
+      resultStatus: 1
+      duration: 0.0013775
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1160
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.SelectWhereOptimizeTest][suite]
+    - id: 1162
+      uniqueId: UnityTests.dll/UniRx/Tests/SelectWhereOptimizeTest/[UnityTests][UniRx.Tests.SelectWhereOptimizeTest.WhereWhere]
+      name: WhereWhere
+      fullName: UniRx.Tests.SelectWhereOptimizeTest.WhereWhere
+      resultStatus: 1
+      duration: 0.0013645
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1160
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.SelectWhereOptimizeTest][suite]
+    - id: 1165
+      uniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.SubjectTests][suite]
+      name: SubjectTests
+      fullName: UniRx.Tests.SubjectTests
+      resultStatus: 1
+      duration: 1.7730343
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1219
+      parentUniqueId: UnityTests.dll/UniRx/[UnityTests][UniRx.Tests][suite]
+    - id: 1168
+      uniqueId: UnityTests.dll/UniRx/Tests/SubjectTests/[UnityTests][UniRx.Tests.SubjectTests.AsyncSubjectTest]
+      name: AsyncSubjectTest
+      fullName: UniRx.Tests.SubjectTests.AsyncSubjectTest
+      resultStatus: 1
+      duration: 0.0040009
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1165
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.SubjectTests][suite]
+    - id: 1169
+      uniqueId: UnityTests.dll/UniRx/Tests/SubjectTests/[UnityTests][UniRx.Tests.SubjectTests.BehaviorSubject]
+      name: BehaviorSubject
+      fullName: UniRx.Tests.SubjectTests.BehaviorSubject
+      resultStatus: 1
+      duration: 0.0054616
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1165
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.SubjectTests][suite]
+    - id: 1170
+      uniqueId: UnityTests.dll/UniRx/Tests/SubjectTests/[UnityTests][UniRx.Tests.SubjectTests.ReplaySubject]
+      name: ReplaySubject
+      fullName: UniRx.Tests.SubjectTests.ReplaySubject
+      resultStatus: 1
+      duration: 0.0103522
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1165
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.SubjectTests][suite]
+    - id: 1171
+      uniqueId: UnityTests.dll/UniRx/Tests/SubjectTests/[UnityTests][UniRx.Tests.SubjectTests.ReplaySubjectWindowReplay]
+      name: ReplaySubjectWindowReplay
+      fullName: UniRx.Tests.SubjectTests.ReplaySubjectWindowReplay
+      resultStatus: 1
+      duration: 1.733922
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1165
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.SubjectTests][suite]
+    - id: 1166
+      uniqueId: UnityTests.dll/UniRx/Tests/SubjectTests/[UnityTests][UniRx.Tests.SubjectTests.Subject]
+      name: Subject
+      fullName: UniRx.Tests.SubjectTests.Subject
+      resultStatus: 1
+      duration: 0.0028834
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1165
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.SubjectTests][suite]
+    - id: 1167
+      uniqueId: UnityTests.dll/UniRx/Tests/SubjectTests/[UnityTests][UniRx.Tests.SubjectTests.SubjectSubscribeTest]
+      name: SubjectSubscribeTest
+      fullName: UniRx.Tests.SubjectTests.SubjectSubscribeTest
+      resultStatus: 1
+      duration: 0.0034822
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1165
+      parentUniqueId: UnityTests.dll/UniRx/Tests/[UnityTests][UniRx.Tests.SubjectTests][suite]
+    m_ResultText: "ToObservable (0.007s)\n---\nExpected is <System.String[7]>, actual
+      is <System.String[0]>\r\n  Values differ at index [0]\r\n  Missing:  < \"DO:1\",
+      \"1\", \"DO:10\"... >\n---\nat NUnit.Framework.CollectionAssert.AreEqual (System.Collections.IEnumerable
+      expected, System.Collections.IEnumerable actual, System.String message, System.Object[]
+      args) [0x00008] in <10b6135e63434fdba4fc6c109928ab3b>:0\r\nat ChainingAssertion.Is[T]
+      (System.Collections.Generic.IEnumerable`1[T] actual, System.Collections.Generic.IEnumerable`1[T]
+      expected, System.String message) [0x00001] in C:\\Users\\Thaina\\Documents\\git\\UniRx\\Assets\\Scripts\\UnityTests\\ChainingAssertion.Unity.cs:40\r\nat
+      ChainingAssertion.Is[T] (System.Collections.Generic.IEnumerable`1[T] actual,
+      T[] expected) [0x00001] in C:\\Users\\Thaina\\Documents\\git\\UniRx\\Assets\\Scripts\\UnityTests\\ChainingAssertion.Unity.cs:34\r\nat
+      UniRx.Tests.ObservableGeneratorTest.ToObservable () [0x00173] in C:\\Users\\Thaina\\Documents\\git\\UniRx\\Assets\\Scripts\\UnityTests\\Rx\\Observable.GeneratorTest.cs:110"
+    m_ResultStacktrace: 'at NUnit.Framework.CollectionAssert.AreEqual (System.Collections.IEnumerable
+      expected, System.Collections.IEnumerable actual, System.String message, System.Object[]
+      args) [0x00008] in <10b6135e63434fdba4fc6c109928ab3b>:0
+
+      at ChainingAssertion.Is[T]
+      (System.Collections.Generic.IEnumerable`1[T] actual, System.Collections.Generic.IEnumerable`1[T]
+      expected, System.String message) [0x00001] in C:\Users\Thaina\Documents\git\UniRx\Assets\Scripts\UnityTests\ChainingAssertion.Unity.cs:40
+
+      at
+      ChainingAssertion.Is[T] (System.Collections.Generic.IEnumerable`1[T] actual,
+      T[] expected) [0x00001] in C:\Users\Thaina\Documents\git\UniRx\Assets\Scripts\UnityTests\ChainingAssertion.Unity.cs:34
+
+      at
+      UniRx.Tests.ObservableGeneratorTest.ToObservable () [0x00173] in C:\Users\Thaina\Documents\git\UniRx\Assets\Scripts\UnityTests\Rx\Observable.GeneratorTest.cs:110
+
+'
+    m_TestListState:
+      scrollPos: {x: 0, y: 1020}
+      m_SelectedIDs: 90a18846
+      m_LastClickedID: 1183359376
+      m_ExpandedIDs: 12df6b8d5e558ba406634aa6ca27acacf82f6bb6f5e5f3bab394a5c599c0ffd0674924daa38c5ee74727d0e7a9136cebe84248f3ebaee9fdbfb67cfe61685c038f6f34073df4d107216ca0088713c60ac13b740bec50ff0cde541e2fd6c93433029a45372b447a4289fcce49b4ef104c1926585169765b538e7b0f5fc8bcf76b2300fa73e16e7175ffffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories:
+      - Uncategorized
+    m_SelectedOption: 0
+  m_EditModeTestListGUI:
+    m_Window: {fileID: 15}
+    m_NewResultList:
+    - id: 1000
+      uniqueId: '[UniRx][suite]'
+      name: UniRx
+      fullName: UniRx
+      resultStatus: 0
+      duration: 0
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
+    m_ResultText: 
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: de541e2fffffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories:
+      - Uncategorized
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -334,7 +4310,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 4c5c0000
     m_LastClickedID: 23628
-    m_ExpandedIDs: 00000000325c0000425c00004c5c000000ca9a3b
+    m_ExpandedIDs: 00000000345c0000445c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -350,7 +4326,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 5}
+      m_ClientGUIView: {fileID: 8}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -362,7 +4338,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000325c0000
+    m_ExpandedIDs: 00000000345c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -406,7 +4382,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 5}
+      m_ClientGUIView: {fileID: 8}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -418,7 +4394,7 @@ MonoBehaviour:
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
---- !u!114 &13
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -462,7 +4438,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
---- !u!114 &14
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -496,7 +4472,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 22fbffff
+      m_ExpandedIDs: 10f0ffff58f0ffff08f2ffff48f2ffff92f2ffffdcf9ffff12fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -512,7 +4488,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 4}
+        m_ClientGUIView: {fileID: 7}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -520,7 +4496,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 4c969a2b90040154d917609493e03593
---- !u!114 &15
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -911,7 +4887,7 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &16
+--- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1011,7 +4987,7 @@ MonoBehaviour:
   m_RenderTexture: {fileID: 0}
   m_showToolbar: 1
   m_showToolbarOnFullscreen: 0
---- !u!114 &17
+--- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
