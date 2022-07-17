@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Reactive.Linq;
+
 using NUnit.Framework;
 
 namespace UniRx.Tests.Operators

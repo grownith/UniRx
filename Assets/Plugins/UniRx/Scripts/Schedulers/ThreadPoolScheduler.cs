@@ -1,13 +1,13 @@
 ﻿#if !UNITY_METRO
 
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Text;
-using UniRx.InternalUtil;
+using System.Reactive.Concurrency;
+using System.Reactive.Disposables;
 
 namespace UniRx
 {
+    /*
     public static partial class Scheduler
     {
         public static readonly IScheduler ThreadPool = new ThreadPoolScheduler();
@@ -23,44 +23,38 @@ namespace UniRx
                 get { return Scheduler.Now; }
             }
 
-            public IDisposable Schedule(Action action)
-            {
+			public IDisposable Schedule<TState>(TState state,Func<IScheduler,TState,IDisposable> action)
+			{
                 var d = new BooleanDisposable();
 
-                System.Threading.ThreadPool.QueueUserWorkItem(_ =>
-                {
+                System.Threading.ThreadPool.QueueUserWorkItem(_ => {
                     if (!d.IsDisposed)
-                    {
-                        action();
-                    }
+                        action(this,state);
                 });
 
                 return d;
-            }
+			}
 
-            public IDisposable Schedule(DateTimeOffset dueTime, Action action)
-            {
-                return Schedule(dueTime - Now, action);
-            }
+			public IDisposable Schedule<TState>(TState state,DateTimeOffset dueTime,Func<IScheduler,TState,IDisposable> action)
+			{
+                return Schedule(state,dueTime - Now,action);
+			}
 
-            public IDisposable Schedule(TimeSpan dueTime, Action action)
-            {
-                return new Timer(dueTime, action);
-            }
+			public IDisposable Schedule<TState>(TState state,TimeSpan dueTime,Func<IScheduler,TState,IDisposable> action)
+			{
+                return new Timer(dueTime,() => action(this,state));
+			}
 
-            public IDisposable SchedulePeriodic(TimeSpan period, Action action)
-            {
-                return new PeriodicTimer(period, action);
-            }
+			public IDisposable SchedulePeriodic<TState>(TState state,TimeSpan period,Func<TState,TState> action)
+			{
+                return new PeriodicTimer(period,() => state = action(state));
+			}
 
-            public void ScheduleQueueing<T>(ICancelable cancel, T state, Action<T> action)
+			public void ScheduleQueueing<T>(ICancelable cancel, T state, Action<T> action)
             {
-                System.Threading.ThreadPool.QueueUserWorkItem(callBackState =>
-                {
+                System.Threading.ThreadPool.QueueUserWorkItem((callBackState) => {
                     if (!cancel.IsDisposed)
-                    {
                         action((T)callBackState);
-                    }
                 }, state);
             }
 
@@ -72,16 +66,15 @@ namespace UniRx
 
                 private readonly SingleAssignmentDisposable _disposable;
 
-                private Action _action;
+                private Func<IDisposable> _action;
                 private System.Threading.Timer _timer;
 
                 private bool _hasAdded;
                 private bool _hasRemoved;
 
-                public Timer(TimeSpan dueTime, Action action)
+                public Timer(TimeSpan dueTime, Func<IDisposable> action)
                 {
                     _disposable = new SingleAssignmentDisposable();
-                    _disposable.Disposable = Disposable.Create(Unroot);
 
                     _action = action;
                     _timer = new System.Threading.Timer(Tick, null, dueTime, TimeSpan.FromMilliseconds(System.Threading.Timeout.Infinite));
@@ -103,7 +96,7 @@ namespace UniRx
                     {
                         if (!_disposable.IsDisposed)
                         {
-                            _action();
+                            _disposable.Disposable = _action();
                         }
                     }
                     finally
@@ -114,8 +107,6 @@ namespace UniRx
 
                 private void Unroot()
                 {
-                    _action = Stubs.Nop;
-
                     var timer = default(System.Threading.Timer);
 
                     lock (s_timers)
@@ -192,6 +183,7 @@ namespace UniRx
             }
         }
     }
+    */
 }
 
 #endif

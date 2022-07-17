@@ -1,4 +1,5 @@
 ﻿using System; // require keep for Windows Universal App
+using System.Reactive.Subjects;
 using UnityEngine;
 
 namespace UniRx.Triggers
@@ -47,7 +48,7 @@ namespace UniRx.Triggers
         {
             return onTriggerStay ?? (onTriggerStay = new Subject<Collider>());
         }
-        
+
         protected override void RaiseOnCompletedOnDestroy()
         {
             if (onTriggerEnter != null)

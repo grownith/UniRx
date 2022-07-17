@@ -1,11 +1,14 @@
 ﻿using System;
-using NUnit.Framework;
-using System.Collections.Generic;
 using System.Threading;
+using System.Reactive.Linq;
+using System.Reactive.Subjects;
+using System.Collections.Generic;
+
+using NUnit.Framework;
 
 namespace UniRx.Tests
 {
-    
+
     public class SubjectTests
     {
         [Test]

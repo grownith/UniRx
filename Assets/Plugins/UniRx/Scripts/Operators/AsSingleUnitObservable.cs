@@ -1,5 +1,5 @@
 ﻿using System;
-using UniRx.Operators;
+using System.Reactive;
 
 namespace UniRx.Operators
 {

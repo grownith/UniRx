@@ -1,12 +1,16 @@
 ﻿using System;
-using NUnit.Framework;
-using System.Collections.Generic;
 using System.Linq;
+using System.Reactive;
+using System.Reactive.Linq;
+using System.Reactive.Subjects;
+using System.Collections.Generic;
+
+using NUnit.Framework;
 
 namespace UniRx.Tests
 {
-    
-    public class ObservableConcatTest
+
+	public class ObservableConcatTest
     {
         [Test]
         public void Concat()

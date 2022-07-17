@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reactive;
+using System.Reactive.Disposables;
 
 namespace UniRx.Operators
 {
@@ -125,7 +127,7 @@ namespace UniRx.Operators
                             parent.list = new List<T>();
                             parent.isRunning = false;
 
-                            // exit lock 
+                            // exit lock
                         }
                         else
                         {
@@ -260,7 +262,7 @@ namespace UniRx.Operators
                             if (parent.isCompleted) return false;
                             parent.isRunning = false;
 
-                            // exit lock 
+                            // exit lock
                         }
                         else
                         {

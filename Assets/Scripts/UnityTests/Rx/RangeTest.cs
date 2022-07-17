@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Reactive.Linq;
+
 using NUnit.Framework;
 
 namespace UniRx.Tests.Operators
 {
-    public class RangeTest
+	public class RangeTest
     {
         [Test]
         public void Range()

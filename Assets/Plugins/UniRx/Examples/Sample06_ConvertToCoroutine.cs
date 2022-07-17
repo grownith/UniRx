@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections;
+using System.Reactive.Linq;
+
 using UnityEngine;
 
 namespace UniRx.Examples
@@ -50,8 +52,8 @@ namespace UniRx.Examples
             if (o.HasError) { Debug.Log(o.Error.ToString()); }
             if (o.HasResult) { Debug.Log(o.Result); }
 
-            // other sample(wait until transform.position.y >= 100) 
-            yield return this.ObserveEveryValueChanged(x => x.transform).FirstOrDefault(x => x.position.y >= 100).ToYieldInstruction();
+            // other sample(wait until transform.position.y >= 100)
+            yield return this.ObserveEveryValueChanged(x => x.transform).FirstOrDefaultAsync(x => x.position.y >= 100).ToYieldInstruction();
         }
 #if UNITY_2018_3_OR_NEWER
 #pragma warning restore CS0618

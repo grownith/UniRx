@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Reactive.Subjects;
+
 using UnityEngine;
 
 namespace UniRx.Diagnostics

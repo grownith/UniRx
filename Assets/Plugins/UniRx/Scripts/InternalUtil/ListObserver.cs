@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Reactive;
 
 namespace UniRx.InternalUtil
 {
-    public class ListObserver<T> : IObserver<T>
+    internal class ListObserver<T> : IObserver<T>
     {
         private readonly ImmutableList<IObserver<T>> _observers;
 

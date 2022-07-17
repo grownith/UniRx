@@ -3,6 +3,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reactive;
+using System.Reactive.Linq;
+using System.Reactive.Threading.Tasks;
 using System.Threading;
 
 namespace UniRx.Toolkit
@@ -125,7 +128,7 @@ namespace UniRx.Toolkit
         }
 
         /// <summary>
-        /// Trim pool instances. 
+        /// Trim pool instances.
         /// </summary>
         /// <param name="instanceCountRatio">0.0f = clear all ~ 1.0f = live all.</param>
         /// <param name="minSize">Min pool count.</param>
@@ -338,7 +341,7 @@ namespace UniRx.Toolkit
         }
 
         /// <summary>
-        /// Trim pool instances. 
+        /// Trim pool instances.
         /// </summary>
         /// <param name="instanceCountRatio">0.0f = clear all ~ 1.0f = live all.</param>
         /// <param name="minSize">Min pool count.</param>
@@ -423,7 +426,7 @@ namespace UniRx.Toolkit
                 for (int i = 0; i < createCount; i++)
                 {
                     var instanceFuture = CreateInstanceAsync();
-                    loaders[i] = instanceFuture.ForEachAsync(x => Return(x));
+                    loaders[i] = instanceFuture.ForEachAsync(x => Return(x)).ToObservable();
                 }
 
                 var awaiter = Observable.WhenAll(loaders).ToYieldInstruction(false, cancellationToken);

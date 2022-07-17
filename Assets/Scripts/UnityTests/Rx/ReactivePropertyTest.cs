@@ -1,14 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Reactive;
+using System.Reactive.Linq;
+using System.Reactive.Subjects;
+
 using NUnit.Framework;
-using UnityEngine.TestTools;
 
 namespace UniRx.Tests
 {
 
-    public class ReactivePropertyTest
+	public class ReactivePropertyTest
     {
         [Test]
         public void ValueType()
@@ -378,7 +378,7 @@ namespace UniRx.Tests
         public void WithLastTest()
         {
             var rp1 = Observable.Return("1").ToReadOnlyReactiveProperty();
-            rp1.Last().Record().Notifications.Is(
+            rp1.LastAsync().Record().Notifications.Is(
                 Notification.CreateOnNext("1"),
                 Notification.CreateOnCompleted<string>());
         }

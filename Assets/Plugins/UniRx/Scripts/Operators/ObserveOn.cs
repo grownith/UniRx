@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 
+using System.Reactive;
+using System.Reactive.Concurrency;
+using System.Reactive.Disposables;
+
 namespace UniRx.Operators
 {
     internal class ObserveOnObservable<T> : OperatorObservableBase<T>
@@ -94,7 +98,7 @@ namespace UniRx.Operators
 
             public override void OnCompleted()
             {
-                QueueAction(new Notification<T>.OnCompletedNotification());
+                QueueAction(Notification<T>.OnCompletedNotification.Instance);
             }
 
             private void QueueAction(Notification<T> data)

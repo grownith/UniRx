@@ -1,10 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Threading;
+
+using System.Reactive;
+using System.Reactive.Linq;
+using System.Reactive.Subjects;
+using System.Reactive.Disposables;
+
+using UniRx.InternalUtil;
 
 #if CSHARP_7_OR_LATER || (UNITY_2018_3_OR_NEWER && (NET_STANDARD_2_0 || NET_4_6))
 using System.Threading.Tasks;
-using UniRx.InternalUtil;
 #endif
 namespace UniRx
 {
@@ -173,7 +178,7 @@ namespace UniRx
     /// </summary>
     public class AsyncReactiveCommand<T> : IAsyncReactiveCommand<T>
     {
-        UniRx.InternalUtil.ImmutableList<Func<T, IObservable<Unit>>> asyncActions = UniRx.InternalUtil.ImmutableList<Func<T, IObservable<Unit>>>.Empty;
+        ImmutableList<Func<T, IObservable<Unit>>> asyncActions = ImmutableList<Func<T, IObservable<Unit>>>.Empty;
 
         readonly object gate = new object();
         readonly IReactiveProperty<bool> canExecuteSource;
@@ -228,7 +233,7 @@ namespace UniRx
                 {
                     try
                     {
-                        var asyncState = a[0].Invoke(parameter) ?? Observable.ReturnUnit();
+                        var asyncState = a[0].Invoke(parameter) ?? Observable.Return(Unit.Default);
                         return asyncState.Finally(() => canExecuteSource.Value = true).Subscribe();
                     }
                     catch
@@ -244,7 +249,7 @@ namespace UniRx
                     {
                         for (int i = 0; i < a.Length; i++)
                         {
-                            xs[i] = a[i].Invoke(parameter) ?? Observable.ReturnUnit();
+                            xs[i] = a[i].Invoke(parameter) ?? Observable.Return(Unit.Default);
                         }
                     }
                     catch
@@ -281,7 +286,7 @@ namespace UniRx
             if (IsDisposed) return;
 
             IsDisposed = true;
-            asyncActions = UniRx.InternalUtil.ImmutableList<Func<T, IObservable<Unit>>>.Empty;
+            asyncActions = ImmutableList<Func<T, IObservable<Unit>>>.Empty;
         }
         class Subscription : IDisposable
         {
@@ -423,7 +428,7 @@ namespace UniRx
         {
             var tcs = new CancellableTaskCompletionSource<T>();
 
-            var subscription = source.Subscribe(x => { tcs.TrySetResult(x); return Observable.ReturnUnit(); });
+            var subscription = source.Subscribe(x => { tcs.TrySetResult(x); return Observable.Return(Unit.Default); });
             cancellationToken.Register(Callback, Tuple.Create(tcs, subscription), false);
 
             return tcs.Task;

@@ -1,11 +1,16 @@
 ﻿using System;
-using NUnit.Framework;
-using System.Collections.Generic;
 using System.Threading;
+using System.Collections.Generic;
+
+using System.Reactive;
+using System.Reactive.Linq;
+using System.Reactive.Subjects;
+
+using NUnit.Framework;
 
 namespace UniRx.Tests
 {
-    
+
     public class ObservableTest
     {
         [SetUp]
@@ -131,7 +136,7 @@ namespace UniRx.Tests
 
                 int[] array = null;
                 subject.Distinct(x => x, EqualityComparer<int>.Default).ToArray().Subscribe(xs => array = xs);
-                       
+
                 foreach (var item in new[] { 1, 10, 10, 1, 100, 100, 100, 5, 70, 7 }) { subject.OnNext(item); };
                 subject.OnCompleted();
 
@@ -338,24 +343,19 @@ namespace UniRx.Tests
         {
             {
                 var list = new List<int>();
-                var xs = Observable.Range(1, 10).ForEachAsync(x => list.Add(x)).ToArray().Wait();
+                Observable.Range(1, 10).ForEachAsync(x => list.Add(x)).Wait();
                 list.Is(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-                xs.Length.Is(1);
-                xs[0].Is(Unit.Default);
             }
 
             {
                 var list = new List<int>();
                 var listI = new List<int>();
-                var xs = Observable.Range(1, 10).ForEachAsync((x, i) =>
-                {
+                Observable.Range(1, 10).ForEachAsync((x, i) => {
                     list.Add(x);
                     listI.Add(i);
-                }).ToArray().Wait();
+                }).Wait();
                 list.Is(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
                 listI.Is(0, 1, 2, 3, 4, 5, 6, 7, 8, 9);
-                xs.Length.Is(1);
-                xs[0].Is(Unit.Default);
             }
         }
     }

@@ -2,6 +2,9 @@
 #if !(UNITY_4_0 || UNITY_4_1 || UNITY_4_2 || UNITY_4_3 || UNITY_4_4 || UNITY_4_5)
 
 using System;
+using System.Reactive;
+using System.Reactive.Linq;
+
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,7 +14,7 @@ namespace UniRx
     {
         public static IDisposable SubscribeToText(this IObservable<string> source, Text text)
         {
-            return source.SubscribeWithState(text, (x, t) => t.text = x);
+            return source.ObserveOnMainThread().SubscribeOnMainThread().SubscribeWithState(text, (x, t) => t.text = x);
         }
 
         public static IDisposable SubscribeToText<T>(this IObservable<T> source, Text text)

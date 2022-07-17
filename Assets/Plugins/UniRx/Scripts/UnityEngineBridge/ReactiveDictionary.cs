@@ -1,7 +1,11 @@
 ﻿using System;
+using System.Reactive;
+using System.Reactive.Linq;
+using System.Reactive.Subjects;
+using System.Runtime.Serialization;
+
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.Serialization;
 
 namespace UniRx
 {
@@ -297,7 +301,7 @@ namespace UniRx
             var subject = countChanged ?? (countChanged = new Subject<int>());
             if (notifyCurrentCount)
             {
-                return subject.StartWith(() => this.Count);
+                return Observable.Defer(() => Observable.Return(this.Count)).Concat(subject);
             }
             else
             {

@@ -1,9 +1,12 @@
 ﻿using System;
+using System.Reactive;
+using System.Reactive.Concurrency;
+using System.Reactive.Disposables;
 
 namespace UniRx.Operators
 {
     // implements note : all field must be readonly.
-    public abstract class OperatorObservableBase<T> : IObservable<T>, IOptimizedObservable<T>
+    public abstract class OperatorObservableBase<T> : IOptimizedObservable<T>
     {
         readonly bool isRequiredSubscribeOnCurrentThread;
 
@@ -25,9 +28,9 @@ namespace UniRx.Operators
             // does not make the safe observer, it breaks exception durability.
             // var safeObserver = Observer.CreateAutoDetachObserver<T>(observer, subscription);
 
-            if (isRequiredSubscribeOnCurrentThread && Scheduler.IsCurrentThreadSchedulerScheduleRequired)
+            if (isRequiredSubscribeOnCurrentThread && CurrentThreadScheduler.IsScheduleRequired)
             {
-                Scheduler.CurrentThread.Schedule(() => subscription.Disposable = SubscribeCore(observer, subscription));
+                CurrentThreadScheduler.Instance.Schedule(Unit.Default,(scheduler,state) => subscription.Disposable = SubscribeCore(observer, subscription));
             }
             else
             {

@@ -1,32 +1,14 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UniRx.Operators;
+using System.Reactive.Concurrency;
 
-namespace UniRx
+namespace System.Reactive.Linq
 {
     public static partial class Observable
     {
-        public static IObservable<T> Finally<T>(this IObservable<T> source, Action finallyAction)
-        {
-            return new FinallyObservable<T>(source, finallyAction);
-        }
-
-        public static IObservable<T> Catch<T, TException>(this IObservable<T> source, Func<TException, IObservable<T>> errorHandler)
-            where TException : Exception
-        {
-            return new CatchObservable<T, TException>(source, errorHandler);
-        }
-
-        public static IObservable<TSource> Catch<TSource>(this IEnumerable<IObservable<TSource>> sources)
-        {
-            return new CatchObservable<TSource>(sources);
-        }
-
         /// <summary>Catch exception and return Observable.Empty.</summary>
         public static IObservable<TSource> CatchIgnore<TSource>(this IObservable<TSource> source)
         {
-            return source.Catch<TSource, Exception>(Stubs.CatchIgnore<TSource>);
+            return source.Catch<TSource, Exception>(UniRx.Stubs.CatchIgnore<TSource>);
         }
 
         /// <summary>Catch exception and return Observable.Empty.</summary>
@@ -39,16 +21,6 @@ namespace UniRx
                 return Observable.Empty<TSource>();
             });
             return result;
-        }
-
-        public static IObservable<TSource> Retry<TSource>(this IObservable<TSource> source)
-        {
-            return RepeatInfinite(source).Catch();
-        }
-
-        public static IObservable<TSource> Retry<TSource>(this IObservable<TSource> source, int retryCount)
-        {
-            return System.Linq.Enumerable.Repeat(source, retryCount).Catch();
         }
 
         /// <summary>
@@ -99,7 +71,7 @@ namespace UniRx
             this IObservable<TSource> source, Action<TException> onError, int retryCount, TimeSpan delay)
             where TException : Exception
         {
-            return source.OnErrorRetry(onError, retryCount, delay, Scheduler.DefaultSchedulers.TimeBasedOperations);
+            return source.OnErrorRetry(onError, retryCount, delay,UniRx.Scheduler.DefaultSchedulers.TimeBasedOperations);
         }
 
         /// <summary>
@@ -121,8 +93,8 @@ namespace UniRx
 
                     return (++count < retryCount)
                         ? (dueTime == TimeSpan.Zero)
-                            ? self.SubscribeOn(Scheduler.CurrentThread)
-                            : self.DelaySubscription(dueTime, delayScheduler).SubscribeOn(Scheduler.CurrentThread)
+                            ? self.SubscribeOn(UniRx.Scheduler.CurrentThread)
+                            : self.DelaySubscription(dueTime, delayScheduler).SubscribeOn(UniRx.Scheduler.CurrentThread)
                         : Observable.Throw<TSource>(ex);
                 });
                 return self;

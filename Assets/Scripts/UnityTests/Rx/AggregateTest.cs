@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Reactive.Linq;
+
 using NUnit.Framework;
 
 namespace UniRx.Tests.Operators
 {
-    
-    public class AggregateTest
+
+	public class AggregateTest
     {
         [Test]
         public void Scan()

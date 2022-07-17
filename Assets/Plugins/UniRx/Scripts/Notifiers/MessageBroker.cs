@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Reactive;
+using System.Reactive.Linq;
+using System.Reactive.Subjects;
 using System.Collections.Generic;
-using UniRx.InternalUtil;
+
 
 namespace UniRx
 {
@@ -81,8 +84,7 @@ namespace UniRx
 
                 if (!notifiers.TryGetValue(typeof(T), out notifier))
                 {
-                    ISubject<T> n = new Subject<T>().Synchronize();
-                    notifier = n;
+                    notifier = new Subject<T>().Synchronize();
                     notifiers.Add(typeof(T), notifier);
                 }
             }
@@ -118,7 +120,7 @@ namespace UniRx
 
         public IObservable<Unit> PublishAsync<T>(T message)
         {
-            UniRx.InternalUtil.ImmutableList<Func<T, IObservable<Unit>>> notifier;
+            ImmutableList<Func<T, IObservable<Unit>>> notifier;
             lock (notifiers)
             {
                 if (isDisposed) throw new ObjectDisposedException("AsyncMessageBroker");
@@ -126,11 +128,11 @@ namespace UniRx
                 object _notifier;
                 if (notifiers.TryGetValue(typeof(T), out _notifier))
                 {
-                    notifier = (UniRx.InternalUtil.ImmutableList<Func<T, IObservable<Unit>>>)_notifier;
+                    notifier = (ImmutableList<Func<T, IObservable<Unit>>>)_notifier;
                 }
                 else
                 {
-                    return Observable.ReturnUnit();
+                    return Observable.Return(Unit.Default);
                 }
             }
 
@@ -152,7 +154,7 @@ namespace UniRx
                 object _notifier;
                 if (!notifiers.TryGetValue(typeof(T), out _notifier))
                 {
-                    var notifier = UniRx.InternalUtil.ImmutableList<Func<T, IObservable<Unit>>>.Empty;
+                    var notifier = ImmutableList<Func<T, IObservable<Unit>>>.Empty;
                     notifier = notifier.Add(asyncMessageReceiver);
                     notifiers.Add(typeof(T), notifier);
                 }

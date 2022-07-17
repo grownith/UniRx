@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+
 using NUnit.Framework;
 
 namespace UniRx.Tests
 {
-    
-    public class QueueWorkerTest
+
+	public class QueueWorkerTest
     {
         [Test]
         public void Enq()

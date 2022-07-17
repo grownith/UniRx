@@ -1,4 +1,5 @@
 ﻿using System; // require keep for Windows Universal App
+using System.Reactive.Subjects;
 using UnityEngine;
 
 namespace UniRx.Triggers
@@ -17,8 +18,8 @@ namespace UniRx.Triggers
         {
             return onJointBreak ?? (onJointBreak = new Subject<float>());
         }
-        
-        
+
+
         Subject<Joint2D> onJointBreak2D;
 
         void OnJointBreak2D(Joint2D brokenJoint)
@@ -30,7 +31,7 @@ namespace UniRx.Triggers
         {
             return onJointBreak2D ?? (onJointBreak2D = new Subject<Joint2D>());
         }
-        
+
 
         protected override void RaiseOnCompletedOnDestroy()
         {

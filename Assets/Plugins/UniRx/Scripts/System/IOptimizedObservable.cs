@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reactive.Concurrency;
 
 namespace UniRx
 {
@@ -11,17 +12,12 @@ namespace UniRx
     {
         public static bool IsRequiredSubscribeOnCurrentThread<T>(this IObservable<T> source)
         {
-            var obs = source as IOptimizedObservable<T>;
-            if (obs == null) return true;
-
-            return obs.IsRequiredSubscribeOnCurrentThread();
+            return !(source is IOptimizedObservable<T> obs) || obs.IsRequiredSubscribeOnCurrentThread();
         }
 
         public static bool IsRequiredSubscribeOnCurrentThread<T>(this IObservable<T> source, IScheduler scheduler)
         {
-            if (scheduler == Scheduler.CurrentThread) return true;
-
-            return IsRequiredSubscribeOnCurrentThread(source);
+            return scheduler == Scheduler.CurrentThread || source.IsRequiredSubscribeOnCurrentThread();
         }
     }
 }

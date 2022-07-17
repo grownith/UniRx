@@ -1,11 +1,13 @@
 ﻿using System;
+using System.Reactive;
+using System.Reactive.Linq;
+
 using NUnit.Framework;
-using System.Collections.Generic;
 
 namespace UniRx.Tests
 {
-    
-    public class ObservableTimeTest
+
+	public class ObservableTimeTest
     {
         [SetUp]
         public void Init()
@@ -19,84 +21,82 @@ namespace UniRx.Tests
             UniRx.Scheduler.SetDefaultForUnity();
         }
 
-        [Test]
-        public void TimerTest()
+        [Test,Timeout(10000)]
+        public void TimerTestPeriodicInterval()
         {
-            // periodic(Observable.Interval)
-            {
-                var now = Scheduler.ThreadPool.Now;
-                var xs = Observable.Timer(TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(1))
-                    .Take(3)
-                    .Timestamp()
-                    .ToArray()
-                    .Wait();
+            var now = Scheduler.ThreadPool.Now;
+            var xs = Observable.Timer(TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(1)).Take(3)
+                .Timestamp()
+                .ToArray()
+                .Wait();
 
-                xs[0].Value.Is(0L);
-                (now.AddMilliseconds(800) <= xs[0].Timestamp && xs[0].Timestamp <= now.AddMilliseconds(1200)).IsTrue();
+            xs[0].Value.Is(0L);
+            (now.AddMilliseconds(800) <= xs[0].Timestamp && xs[0].Timestamp <= now.AddMilliseconds(1200)).IsTrue();
 
-                xs[1].Value.Is(1L);
-                (now.AddMilliseconds(1800) <= xs[1].Timestamp && xs[1].Timestamp <= now.AddMilliseconds(2200)).IsTrue();
+            xs[1].Value.Is(1L);
+            (now.AddMilliseconds(1800) <= xs[1].Timestamp && xs[1].Timestamp <= now.AddMilliseconds(2200)).IsTrue();
 
-                xs[2].Value.Is(2L);
-                (now.AddMilliseconds(2800) <= xs[2].Timestamp && xs[2].Timestamp <= now.AddMilliseconds(3200)).IsTrue();
-            }
+            xs[2].Value.Is(2L);
+            (now.AddMilliseconds(2800) <= xs[2].Timestamp && xs[2].Timestamp <= now.AddMilliseconds(3200)).IsTrue();
+        }
 
-            // dueTime + periodic
-            {
-                var now = Scheduler.ThreadPool.Now;
-                var xs = Observable.Timer(TimeSpan.FromSeconds(2), TimeSpan.FromSeconds(1))
-                    .Take(3)
-                    .Timestamp()
-                    .Select(x => Math.Round((x.Timestamp - now).TotalSeconds, 0))
-                    .ToArray()
-                    .Wait();
+        [Test,Timeout(10000)]
+        public void TimerTestDueTimePeriodic()
+        {
+            var now = Scheduler.ThreadPool.Now;
+            var xs = Observable.Timer(TimeSpan.FromSeconds(2), TimeSpan.FromSeconds(1))
+                .Take(3)
+                .Timestamp()
+                .Select(x => Math.Round((x.Timestamp - now).TotalSeconds, 0))
+                .ToArray()
+                .Wait();
 
-                xs[0].Is(2);
-                xs[1].Is(3);
-                xs[2].Is(4);
-            }
+            xs[0].Is(2);
+            xs[1].Is(3);
+            xs[2].Is(4);
+        }
 
-            // dueTime(DateTimeOffset)
-            {
-                var now = Scheduler.ThreadPool.Now;
-                var xs = Observable.Timer(now.AddSeconds(2), TimeSpan.FromSeconds(1))
-                    .Take(3)
-                    .Timestamp()
-                    .Select(x => Math.Round((x.Timestamp - now).TotalSeconds, 0))
-                    .ToArray()
-                    .Wait();
+        [Test,Timeout(10000)]
+        public void TimerTestDueTime()
+        {
+            var now = Scheduler.ThreadPool.Now;
+            var xs = Observable.Timer(now.AddSeconds(2), TimeSpan.FromSeconds(1))
+                .Take(3)
+                .Timestamp()
+                .Select(x => Math.Round((x.Timestamp - now).TotalSeconds, 0))
+                .ToArray()
+                .Wait();
 
-                xs[0].Is(2);
-                xs[1].Is(3);
-                xs[2].Is(4);
-            }
+            xs[0].Is(2);
+            xs[1].Is(3);
+            xs[2].Is(4);
+        }
 
-            // onetime
-            {
-                var now = Scheduler.ThreadPool.Now;
-                var xs = Observable.Timer(TimeSpan.FromSeconds(2))
-                    .Timestamp()
-                    .Select(x => Math.Round((x.Timestamp - now).TotalSeconds, 0))
-                    .ToArray()
-                    .Wait();
+        [Test,Timeout(10000)]
+        public void TimerTestOneTime()
+        {
+            var now = Scheduler.ThreadPool.Now;
+            var xs = Observable.Timer(TimeSpan.FromSeconds(2))
+                .Timestamp()
+                .Select(x => Math.Round((x.Timestamp - now).TotalSeconds, 0))
+                .ToArray()
+                .Wait();
 
-                xs[0].Is(2);
-            }
+            xs[0].Is(2);
+        }
 
-            // non periodic scheduler
-            {
-                var now = Scheduler.CurrentThread.Now;
-                var xs = Observable.Timer(TimeSpan.FromSeconds(2), TimeSpan.FromSeconds(1), Scheduler.CurrentThread)
-                    .Take(3)
-                    .Timestamp()
-                    .Select(x => Math.Round((x.Timestamp - now).TotalSeconds, 0))
-                    .ToArray()
-                    .Wait();
+        [Test,Timeout(10000)]
+        public void TimerTestNonPeriodic()
+        {
+            var now = Scheduler.CurrentThread.Now;
+            var xs = Observable.Timer(TimeSpan.FromSeconds(2), TimeSpan.FromSeconds(1), Scheduler.CurrentThread)
+                .Take(3)
+                .Timestamp()
+                .Select(x => Math.Round((x.Timestamp - now).TotalSeconds, 0))
+                .ToArray()
+                .Wait();
 
-                xs[0].Is(2);
-                xs[1].Is(3);
-                xs[2].Is(4);
-            }
+            Assert.That(xs,Is.EqualTo(new[] { 2,3,4 }).Within(0.001));
         }
 
         [Test]

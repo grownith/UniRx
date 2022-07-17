@@ -1,13 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.Reactive.Disposables;
+
 using NUnit.Framework;
 
 namespace UniRx.Tests
 {
-    
-    public class DisposableTest
+
+	public class DisposableTest
     {
         [Test]
         public void SingleAssignment()
@@ -25,7 +24,6 @@ namespace UniRx.Tests
             d.Disposable = id1; id1.IsDisposed.IsTrue();
             d.Disposable = id2; id2.IsDisposed.IsTrue();
             d.Disposable = id3; id3.IsDisposed.IsTrue();
-
             // normal flow
             d = new SingleAssignmentDisposable();
             id1 = new IdDisp(1);
@@ -148,7 +146,7 @@ namespace UniRx.Tests
             id3.IsDisposed.IsFalse();
 
             d.Dispose();
-            
+
             id3.IsDisposed.IsTrue();
 
             // null

@@ -1,11 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
+using System.Reactive;
+using System.Reactive.Linq;
+using System.Reactive.Subjects;
+using System.Collections.Generic;
+
 using NUnit.Framework;
 
 namespace UniRx.Tests.Operators
 {
-    
+
     public class ConversionTest
     {
         [Test]
@@ -31,7 +35,7 @@ namespace UniRx.Tests.Operators
         [Test]
         public void Cast()
         {
-            Observable.Range(1, 3).Cast<int, object>().ToArrayWait().Is(1, 2, 3);
+            Observable.Range(1,3).Select((i) => (object)i).ToArrayWait().Is(1, 2, 3);
         }
 
         [Test]
@@ -40,7 +44,7 @@ namespace UniRx.Tests.Operators
             var subject = new Subject<object>();
 
             var list = new List<int>();
-            subject.OfType(default(int)).Subscribe(x => list.Add(x));
+            subject.OfType<int>().Subscribe(x => list.Add(x));
 
             subject.OnNext(1);
             subject.OnNext(2);

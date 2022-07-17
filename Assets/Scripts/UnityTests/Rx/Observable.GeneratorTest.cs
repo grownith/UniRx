@@ -1,10 +1,13 @@
 ﻿using System;
-using NUnit.Framework;
+using System.Reactive;
+using System.Reactive.Linq;
 using System.Collections.Generic;
+
+using NUnit.Framework;
 
 namespace UniRx.Tests
 {
-    
+
     public class ObservableGeneratorTest
     {
         [SetUp]
@@ -29,7 +32,7 @@ namespace UniRx.Tests
         public void Never()
         {
             Assert.Catch<TimeoutException>(() =>
-                Observable.Never<Unit>().Materialize().ToArray().Wait(TimeSpan.FromMilliseconds(10)));
+                Observable.Never<Unit>().Materialize().ToArray().Timeout(TimeSpan.FromMilliseconds(10)).Wait());
         }
 
         [Test]
@@ -75,21 +78,6 @@ namespace UniRx.Tests
         {
             {
                 var msgs = new List<string>();
-                new[] { 1, 10, 100, 1000, 10000, 20000 }.ToObservable(Scheduler.CurrentThread)
-                    .Do(i => msgs.Add("DO:" + i))
-                    .Scan((x, y) =>
-                    {
-                        if (y == 100) throw new Exception("exception");
-                        msgs.Add("x:" + x + " y:" + y);
-                        return x + y;
-                    })
-                    .Subscribe(x => msgs.Add(x.ToString()), e => msgs.Add(e.Message), () => msgs.Add("comp"));
-
-                msgs.Is("DO:1", "1", "DO:10", "x:1 y:10", "11", "DO:100", "exception");
-            }
-
-            {
-                var msgs = new List<string>();
                 new[] { 1, 10, 100, 1000, 10000, 20000 }.ToObservable(Scheduler.Immediate)
                     .Do(i => msgs.Add("DO:" + i))
                     .Scan((x, y) =>
@@ -106,6 +94,21 @@ namespace UniRx.Tests
                     "DO:20000", "x:11011 y:20000"
                     );
             }
+
+            {
+                var msgs = new List<string>();
+                new[] { 1, 10, 100, 1000, 10000, 20000 }.ToObservable(Scheduler.MainThread)
+                    .Do(i => msgs.Add("DO:" + i))
+                    .Scan((x, y) =>
+                    {
+                        if (y == 100) throw new Exception("exception");
+                        msgs.Add("x:" + x + " y:" + y);
+                        return x + y;
+                    })
+                    .Subscribe(x => msgs.Add(x.ToString()), e => msgs.Add(e.Message), () => msgs.Add("comp"));
+
+                msgs.Is("DO:1", "1", "DO:10", "x:1 y:10", "11", "DO:100", "exception");
+            }
         }
 
         [Test]
@@ -116,21 +119,12 @@ namespace UniRx.Tests
         }
 
         [Test]
-        public void OptimizeReturnTest()
+        public void OptimizeReturnTest([Values(-1,-2,0,3,6,9,10,100,1000)]int i)
         {
-            for (int i = -1; i <= 9; i++)
-            {
-                var r = Observable.Return(i);
-                var xs = r.Record();
-                xs.Values[0].Is(i);
-                r.GetType().FullName.Contains("ImmutableReturnInt32Observable").IsTrue();
-            }
-            foreach (var i in new[] { -2, 10, 100 })
-            {
-                var r = Observable.Return(i);
-                r.Record().Values[0].Is(i);
-                r.GetType().FullName.Contains("ImmediateReturnObservable").IsTrue();
-            }
+            var r = Observable.Return(i);
+            r.Record().Values[0].Is(i);
+            Assert.That(r.GetType().FullName,Does.Contain("Return"));
+            Assert.That(r.GetType().GetGenericArguments(),Contains.Item(typeof(int)));
         }
     }
 }

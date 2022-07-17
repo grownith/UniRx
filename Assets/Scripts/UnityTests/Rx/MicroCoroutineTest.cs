@@ -1,13 +1,14 @@
 ﻿using System;
-using NUnit.Framework;
-using System.Collections;
 using System.Linq;
-using System.Collections.Generic;
 using System.Reflection;
+using System.Collections;
+using System.Reactive.Linq;
+
+using NUnit.Framework;
 
 namespace UniRx.Tests
 {
-    class DecrementEnumerator : IEnumerator
+	class DecrementEnumerator : IEnumerator
     {
         readonly int original;
         int count;
@@ -45,7 +46,7 @@ namespace UniRx.Tests
         }
     }
 
-    
+
     public class MicroCoroutineTest
     {
         static UniRx.InternalUtil.MicroCoroutine Create()

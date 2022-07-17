@@ -1,14 +1,16 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading;
+using System.Reactive.Concurrency;
+using System.Reactive.Disposables;
 
 namespace UniRx
 {
     // Scheduler Extension
     public static partial class Scheduler
     {
+        public static IScheduler Immediate => ImmediateScheduler.Instance;
+        public static IScheduler ThreadPool => ThreadPoolScheduler.Instance;
+        public static IScheduler CurrentThread => CurrentThreadScheduler.Instance;
+
         // configurable defaults
         public static class DefaultSchedulers
         {

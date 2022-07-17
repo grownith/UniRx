@@ -1,13 +1,10 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reactive.Linq;
 using System.Threading;
 using UniRx.InternalUtil;
 using UniRx.Triggers;
-
-#if !UniRxLibrary
-using ObservableUnity = UniRx.Observable;
-#endif
 
 namespace UniRx
 {
@@ -49,7 +46,7 @@ namespace UniRx
             // MicroCoroutine does not publish value immediately, so publish value on subscribe.
             if (isUnityObject)
             {
-                return ObservableUnity.FromMicroCoroutine<TProperty>((observer, cancellationToken) =>
+                return Observable.FromMicroCoroutine<TProperty>((observer, cancellationToken) =>
                 {
                     if (unityObject != null)
                     {
@@ -79,7 +76,7 @@ namespace UniRx
                 var reference = new WeakReference(source);
                 source = null;
 
-                return ObservableUnity.FromMicroCoroutine<TProperty>((observer, cancellationToken) =>
+                return Observable.FromMicroCoroutine<TProperty>((observer, cancellationToken) =>
                 {
                     var target = reference.Target;
                     if (target != null)

@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
+using System.Reactive;
+using System.Reactive.Disposables;
+
 namespace UniRx.Operators
 {
     internal class WhenAllObservable<T> : OperatorObservableBase<T[]>

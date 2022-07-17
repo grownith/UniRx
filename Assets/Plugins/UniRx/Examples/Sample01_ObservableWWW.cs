@@ -4,6 +4,9 @@
 #pragma warning disable CS0618
 #endif
 
+using System;
+using System.Reactive.Linq;
+
 using UnityEngine;
 
 namespace UniRx.Examples
@@ -64,20 +67,19 @@ namespace UniRx.Examples
             {
                 // If WWW has .error, ObservableWWW throws WWWErrorException to onError pipeline.
                 // WWWErrorException has RawErrorMessage, HasResponse, StatusCode, ResponseHeaders
-                ObservableWWW.Get("http://www.google.com/404")
-                    .CatchIgnore((WWWErrorException ex) =>
+                ObservableWWW.Get("http://www.google.com/404").Catch((WWWErrorException ex) => {
+                    Debug.Log(ex.RawErrorMessage);
+                    if (ex.HasResponse)
                     {
-                        Debug.Log(ex.RawErrorMessage);
-                        if (ex.HasResponse)
-                        {
-                            Debug.Log(ex.StatusCode);
-                        }
-                        foreach (var item in ex.ResponseHeaders)
-                        {
-                            Debug.Log(item.Key + ":" + item.Value);
-                        }
-                    })
-                    .Subscribe();
+                        Debug.Log(ex.StatusCode);
+                    }
+                    foreach (var item in ex.ResponseHeaders)
+                    {
+                        Debug.Log(item.Key + ":" + item.Value);
+                    }
+
+                    return Observable.Empty<string>();
+                }).Subscribe();
             }
         }
     }

@@ -1,13 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using System.Reactive.Linq;
+using System.Collections.Generic;
+
 using NUnit.Framework;
 
 namespace UniRx.Tests.Operators
 {
-    
-    public class DoTest
+
+	public class DoTest
     {
         class ListObserver : IObserver<int>
         {

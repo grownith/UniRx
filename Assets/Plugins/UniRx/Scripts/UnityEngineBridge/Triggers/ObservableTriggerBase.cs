@@ -1,4 +1,8 @@
 ﻿using System; // require keep for Windows Universal App
+using System.Reactive;
+using System.Reactive.Linq;
+using System.Reactive.Subjects;
+
 using UnityEngine;
 
 namespace UniRx.Triggers

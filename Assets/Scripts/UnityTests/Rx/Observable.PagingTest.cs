@@ -1,8 +1,12 @@
 ﻿using System;
-using NUnit.Framework;
-using System.Collections.Generic;
-using UniRx;
 using System.Threading;
+using System.Collections.Generic;
+
+using System.Reactive;
+using System.Reactive.Linq;
+using System.Reactive.Subjects;
+
+using NUnit.Framework;
 
 namespace UniRx.Tests
 {
@@ -269,7 +273,7 @@ namespace UniRx.Tests
 
             var l = new List<Notification<int>>();
             {
-                s.First().Materialize().Subscribe(l.Add);
+                s.FirstAsync().Materialize().Subscribe(l.Add);
 
                 s.OnNext(10);
                 s.OnError(new Exception());
@@ -281,7 +285,7 @@ namespace UniRx.Tests
             s = new Subject<int>();
             l.Clear();
             {
-                s.First().Materialize().Subscribe(l.Add);
+                s.FirstAsync().Materialize().Subscribe(l.Add);
 
                 s.OnError(new Exception());
 
@@ -291,7 +295,7 @@ namespace UniRx.Tests
             s = new Subject<int>();
             l.Clear();
             {
-                s.First().Materialize().Subscribe(l.Add);
+                s.FirstAsync().Materialize().Subscribe(l.Add);
 
                 s.OnCompleted();
 
@@ -301,7 +305,7 @@ namespace UniRx.Tests
             s = new Subject<int>();
             l.Clear();
             {
-                s.First(x => x % 2 == 0).Materialize().Subscribe(l.Add);
+                s.FirstAsync(x => x % 2 == 0).Materialize().Subscribe(l.Add);
                 s.OnNext(9);
                 s.OnError(new Exception());
                 l[0].Kind.Is(NotificationKind.OnError);
@@ -310,7 +314,7 @@ namespace UniRx.Tests
             s = new Subject<int>();
             l.Clear();
             {
-                s.First(x => x % 2 == 0).Materialize().Subscribe(l.Add);
+                s.FirstAsync(x => x % 2 == 0).Materialize().Subscribe(l.Add);
                 s.OnNext(9);
                 s.OnNext(10);
                 s.OnError(new Exception());
@@ -321,7 +325,7 @@ namespace UniRx.Tests
             s = new Subject<int>();
             l.Clear();
             {
-                s.First(x => x % 2 == 0).Materialize().Subscribe(l.Add);
+                s.FirstAsync(x => x % 2 == 0).Materialize().Subscribe(l.Add);
                 s.OnNext(9);
                 s.OnCompleted();
                 l[0].Kind.Is(NotificationKind.OnError);
@@ -335,7 +339,7 @@ namespace UniRx.Tests
 
             var l = new List<Notification<int>>();
             {
-                s.FirstOrDefault().Materialize().Subscribe(l.Add);
+                s.FirstOrDefaultAsync().Materialize().Subscribe(l.Add);
 
                 s.OnNext(10);
                 s.OnError(new Exception());
@@ -347,7 +351,7 @@ namespace UniRx.Tests
             s = new Subject<int>();
             l.Clear();
             {
-                s.FirstOrDefault().Materialize().Subscribe(l.Add);
+                s.FirstOrDefaultAsync().Materialize().Subscribe(l.Add);
 
                 s.OnError(new Exception());
 
@@ -357,7 +361,7 @@ namespace UniRx.Tests
             s = new Subject<int>();
             l.Clear();
             {
-                s.FirstOrDefault().Materialize().Subscribe(l.Add);
+                s.FirstOrDefaultAsync().Materialize().Subscribe(l.Add);
 
                 s.OnCompleted();
 
@@ -368,7 +372,7 @@ namespace UniRx.Tests
             s = new Subject<int>();
             l.Clear();
             {
-                s.FirstOrDefault(x => x % 2 == 0).Materialize().Subscribe(l.Add);
+                s.FirstOrDefaultAsync(x => x % 2 == 0).Materialize().Subscribe(l.Add);
                 s.OnNext(9);
                 s.OnCompleted();
 
@@ -379,7 +383,7 @@ namespace UniRx.Tests
             s = new Subject<int>();
             l.Clear();
             {
-                s.FirstOrDefault(x => x % 2 == 0).Materialize().Subscribe(l.Add);
+                s.FirstOrDefaultAsync(x => x % 2 == 0).Materialize().Subscribe(l.Add);
                 s.OnNext(9);
                 s.OnNext(10);
 
@@ -390,7 +394,7 @@ namespace UniRx.Tests
             s = new Subject<int>();
             l.Clear();
             {
-                s.FirstOrDefault(x => x % 2 == 0).Materialize().Subscribe(l.Add);
+                s.FirstOrDefaultAsync(x => x % 2 == 0).Materialize().Subscribe(l.Add);
                 s.OnNext(9);
                 s.OnError(new Exception());
 
@@ -404,7 +408,7 @@ namespace UniRx.Tests
             var s = new Subject<int>();
             var l = new List<Notification<int>>();
             {
-                s.Last().Materialize().Subscribe(l.Add);
+                s.LastAsync().Materialize().Subscribe(l.Add);
 
                 s.OnNext(10);
                 s.OnNext(20);
@@ -418,7 +422,7 @@ namespace UniRx.Tests
             s = new Subject<int>();
             l.Clear();
             {
-                s.Last().Materialize().Subscribe(l.Add);
+                s.LastAsync().Materialize().Subscribe(l.Add);
 
                 s.OnNext(10);
                 s.OnNext(20);
@@ -431,7 +435,7 @@ namespace UniRx.Tests
             s = new Subject<int>();
             l.Clear();
             {
-                s.Last().Materialize().Subscribe(l.Add);
+                s.LastAsync().Materialize().Subscribe(l.Add);
 
                 s.OnCompleted();
 
@@ -441,7 +445,7 @@ namespace UniRx.Tests
             s = new Subject<int>();
             l = new List<Notification<int>>();
             {
-                s.Last(x => x % 2 == 0).Materialize().Subscribe(l.Add);
+                s.LastAsync(x => x % 2 == 0).Materialize().Subscribe(l.Add);
 
                 s.OnNext(5);
                 s.OnNext(20);
@@ -455,7 +459,7 @@ namespace UniRx.Tests
             s = new Subject<int>();
             l.Clear();
             {
-                s.Last(x => x % 2 == 0).Materialize().Subscribe(l.Add);
+                s.LastAsync(x => x % 2 == 0).Materialize().Subscribe(l.Add);
 
                 s.OnNext(5);
                 s.OnNext(10);
@@ -467,7 +471,7 @@ namespace UniRx.Tests
             s = new Subject<int>();
             l.Clear();
             {
-                s.Last(x => x % 2 == 0).Materialize().Subscribe(l.Add);
+                s.LastAsync(x => x % 2 == 0).Materialize().Subscribe(l.Add);
                 s.OnNext(5);
                 s.OnNext(9);
                 s.OnCompleted();
@@ -483,7 +487,7 @@ namespace UniRx.Tests
 
             var l = new List<Notification<int>>();
             {
-                s.LastOrDefault().Materialize().Subscribe(l.Add);
+                s.LastOrDefaultAsync().Materialize().Subscribe(l.Add);
 
                 s.OnNext(10);
                 s.OnNext(20);
@@ -497,7 +501,7 @@ namespace UniRx.Tests
             s = new Subject<int>();
             l.Clear();
             {
-                s.LastOrDefault().Materialize().Subscribe(l.Add);
+                s.LastOrDefaultAsync().Materialize().Subscribe(l.Add);
 
                 s.OnNext(10);
                 s.OnNext(20);
@@ -510,7 +514,7 @@ namespace UniRx.Tests
             s = new Subject<int>();
             l.Clear();
             {
-                s.LastOrDefault().Materialize().Subscribe(l.Add);
+                s.LastOrDefaultAsync().Materialize().Subscribe(l.Add);
 
                 s.OnCompleted();
 
@@ -521,7 +525,7 @@ namespace UniRx.Tests
             s = new Subject<int>();
             l.Clear();
             {
-                s.LastOrDefault(x => x % 2 == 0).Materialize().Subscribe(l.Add);
+                s.LastOrDefaultAsync(x => x % 2 == 0).Materialize().Subscribe(l.Add);
                 s.OnNext(9);
                 s.OnCompleted();
 
@@ -532,7 +536,7 @@ namespace UniRx.Tests
             s = new Subject<int>();
             l = new List<Notification<int>>();
             {
-                s.LastOrDefault(x => x % 2 == 0).Materialize().Subscribe(l.Add);
+                s.LastOrDefaultAsync(x => x % 2 == 0).Materialize().Subscribe(l.Add);
 
                 s.OnNext(5);
                 s.OnNext(20);
@@ -546,7 +550,7 @@ namespace UniRx.Tests
             s = new Subject<int>();
             l.Clear();
             {
-                s.LastOrDefault(x => x % 2 == 0).Materialize().Subscribe(l.Add);
+                s.LastOrDefaultAsync(x => x % 2 == 0).Materialize().Subscribe(l.Add);
 
                 s.OnNext(5);
                 s.OnNext(10);
@@ -562,7 +566,7 @@ namespace UniRx.Tests
             var s = new Subject<int>();
             var l = new List<Notification<int>>();
             {
-                s.Single().Materialize().Subscribe(l.Add);
+                s.SingleAsync().Materialize().Subscribe(l.Add);
 
                 s.OnNext(10);
                 s.OnCompleted();
@@ -574,7 +578,7 @@ namespace UniRx.Tests
             s = new Subject<int>();
             l.Clear();
             {
-                s.Single().Materialize().Subscribe(l.Add);
+                s.SingleAsync().Materialize().Subscribe(l.Add);
 
                 s.OnNext(20);
                 s.OnNext(30);
@@ -586,7 +590,7 @@ namespace UniRx.Tests
             s = new Subject<int>();
             l.Clear();
             {
-                s.Single().Materialize().Subscribe(l.Add);
+                s.SingleAsync().Materialize().Subscribe(l.Add);
 
                 s.OnNext(10);
                 s.OnError(new Exception());
@@ -597,7 +601,7 @@ namespace UniRx.Tests
             s = new Subject<int>();
             l.Clear();
             {
-                s.Single().Materialize().Subscribe(l.Add);
+                s.SingleAsync().Materialize().Subscribe(l.Add);
 
                 s.OnCompleted();
 
@@ -607,7 +611,7 @@ namespace UniRx.Tests
             s = new Subject<int>();
             l = new List<Notification<int>>();
             {
-                s.Single(x => x % 2 == 0).Materialize().Subscribe(l.Add);
+                s.SingleAsync(x => x % 2 == 0).Materialize().Subscribe(l.Add);
                 s.OnNext(9);
                 s.OnNext(10);
                 s.OnCompleted();
@@ -619,7 +623,7 @@ namespace UniRx.Tests
             s = new Subject<int>();
             l = new List<Notification<int>>();
             {
-                s.Single(x => x % 2 == 0).Materialize().Subscribe(l.Add);
+                s.SingleAsync(x => x % 2 == 0).Materialize().Subscribe(l.Add);
                 s.OnNext(10);
                 s.OnNext(9);
                 s.OnCompleted();
@@ -631,7 +635,7 @@ namespace UniRx.Tests
             s = new Subject<int>();
             l.Clear();
             {
-                s.Single(x => x % 2 == 0).Materialize().Subscribe(l.Add);
+                s.SingleAsync(x => x % 2 == 0).Materialize().Subscribe(l.Add);
                 s.OnNext(20);
                 s.OnNext(30);
                 s.OnError(new Exception());
@@ -642,7 +646,7 @@ namespace UniRx.Tests
             s = new Subject<int>();
             l.Clear();
             {
-                s.Single(x => x % 2 == 0).Materialize().Subscribe(l.Add);
+                s.SingleAsync(x => x % 2 == 0).Materialize().Subscribe(l.Add);
 
                 s.OnNext(10);
                 s.OnError(new Exception());
@@ -653,7 +657,7 @@ namespace UniRx.Tests
             s = new Subject<int>();
             l.Clear();
             {
-                s.Single(x => x % 2 == 0).Materialize().Subscribe(l.Add);
+                s.SingleAsync(x => x % 2 == 0).Materialize().Subscribe(l.Add);
 
                 s.OnCompleted();
 
@@ -668,7 +672,7 @@ namespace UniRx.Tests
 
             var l = new List<Notification<int>>();
             {
-                s.SingleOrDefault().Materialize().Subscribe(l.Add);
+                s.SingleOrDefaultAsync().Materialize().Subscribe(l.Add);
 
                 s.OnNext(10);
                 s.OnCompleted();
@@ -680,7 +684,7 @@ namespace UniRx.Tests
             s = new Subject<int>();
             l.Clear();
             {
-                s.SingleOrDefault().Materialize().Subscribe(l.Add);
+                s.SingleOrDefaultAsync().Materialize().Subscribe(l.Add);
 
                 s.OnNext(20);
                 s.OnNext(30);
@@ -692,7 +696,7 @@ namespace UniRx.Tests
             s = new Subject<int>();
             l.Clear();
             {
-                s.SingleOrDefault().Materialize().Subscribe(l.Add);
+                s.SingleOrDefaultAsync().Materialize().Subscribe(l.Add);
 
                 s.OnNext(10);
                 s.OnError(new Exception());
@@ -703,7 +707,7 @@ namespace UniRx.Tests
             s = new Subject<int>();
             l.Clear();
             {
-                s.SingleOrDefault().Materialize().Subscribe(l.Add);
+                s.SingleOrDefaultAsync().Materialize().Subscribe(l.Add);
 
                 s.OnCompleted();
 
@@ -714,7 +718,7 @@ namespace UniRx.Tests
             s = new Subject<int>();
             l = new List<Notification<int>>();
             {
-                s.SingleOrDefault(x => x % 2 == 0).Materialize().Subscribe(l.Add);
+                s.SingleOrDefaultAsync(x => x % 2 == 0).Materialize().Subscribe(l.Add);
                 s.OnNext(9);
                 s.OnNext(10);
                 s.OnCompleted();
@@ -726,7 +730,7 @@ namespace UniRx.Tests
             s = new Subject<int>();
             l = new List<Notification<int>>();
             {
-                s.SingleOrDefault(x => x % 2 == 0).Materialize().Subscribe(l.Add);
+                s.SingleOrDefaultAsync(x => x % 2 == 0).Materialize().Subscribe(l.Add);
                 s.OnNext(10);
                 s.OnNext(9);
                 s.OnCompleted();
@@ -738,7 +742,7 @@ namespace UniRx.Tests
             s = new Subject<int>();
             l.Clear();
             {
-                s.SingleOrDefault(x => x % 2 == 0).Materialize().Subscribe(l.Add);
+                s.SingleOrDefaultAsync(x => x % 2 == 0).Materialize().Subscribe(l.Add);
                 s.OnNext(20);
                 s.OnNext(30);
                 s.OnError(new Exception());
@@ -749,7 +753,7 @@ namespace UniRx.Tests
             s = new Subject<int>();
             l.Clear();
             {
-                s.SingleOrDefault(x => x % 2 == 0).Materialize().Subscribe(l.Add);
+                s.SingleOrDefaultAsync(x => x % 2 == 0).Materialize().Subscribe(l.Add);
 
                 s.OnNext(10);
                 s.OnError(new Exception());
@@ -760,7 +764,7 @@ namespace UniRx.Tests
             s = new Subject<int>();
             l.Clear();
             {
-                s.SingleOrDefault(x => x % 2 == 0).Materialize().Subscribe(l.Add);
+                s.SingleOrDefaultAsync(x => x % 2 == 0).Materialize().Subscribe(l.Add);
 
                 s.OnCompleted();
 
@@ -771,7 +775,7 @@ namespace UniRx.Tests
             s = new Subject<int>();
             l.Clear();
             {
-                s.SingleOrDefault(x => x % 2 == 0).Materialize().Subscribe(l.Add);
+                s.SingleOrDefaultAsync(x => x % 2 == 0).Materialize().Subscribe(l.Add);
                 s.OnNext(9);
                 s.OnCompleted();
 
@@ -820,15 +824,16 @@ namespace UniRx.Tests
                 a.OnNext(1);
                 a.OnNext(10);
                 b.OnCompleted();
-                l.Count.Is(3);
+                l.Count.Is(2);
 
                 b.OnNext(1000);
-                l.Count.Is(3);
+                l.Count.Is(2);
 
                 a.OnNext(100);
                 l.Count.Is(3);
                 l[0].Value.Is(1);
                 l[1].Value.Is(10);
+                l[2].Value.Is(100);
             }
         }
 
@@ -864,7 +869,7 @@ namespace UniRx.Tests
                     .Timestamp();
 
                 var v = timer.Skip(TimeSpan.FromMilliseconds(300))
-                    .First()
+                    .FirstAsync()
                     .Wait();
 
                 var x = (v.Timestamp - now);
@@ -879,7 +884,7 @@ namespace UniRx.Tests
                 var v = timer
                     .Skip(TimeSpan.FromMilliseconds(100))
                     .Skip(TimeSpan.FromMilliseconds(300))
-                    .First()
+                    .FirstAsync()
                     .Wait();
 
                 var x = (v.Timestamp - now);

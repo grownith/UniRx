@@ -1,13 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using System.Reactive.Linq;
+
 using NUnit.Framework;
 
 namespace UniRx.Tests.Operators
 {
-    
-    public class ToTest
+
+	public class ToTest
     {
 
         [Test]

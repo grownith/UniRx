@@ -1,11 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
+using System.Reactive.Linq;
+using System.Reactive.Subjects;
+using System.Collections.Generic;
+
 using NUnit.Framework;
 
 namespace UniRx.Tests.Operators
 {
-    
+
     public class SelectMany
     {
         [Test]

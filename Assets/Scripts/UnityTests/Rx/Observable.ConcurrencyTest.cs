@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Linq;
-using NUnit.Framework;
+using System.Reactive;
+using System.Reactive.Linq;
+using System.Reactive.Subjects;
 using System.Collections.Generic;
-using System.Threading;
+
+using NUnit.Framework;
 
 namespace UniRx.Tests
 {

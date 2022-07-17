@@ -3,11 +3,14 @@
 #endif
 
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Reflection;
-using System.Threading;
+using System.Collections;
+
+using System.Reactive;
+using System.Reactive.Subjects;
+
 using UniRx.InternalUtil;
+
 using UnityEngine;
 
 namespace UniRx

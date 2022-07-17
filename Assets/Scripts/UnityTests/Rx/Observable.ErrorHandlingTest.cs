@@ -1,13 +1,14 @@
-﻿using NUnit.Framework;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Linq;
-using System.Text;
+using System.Reactive;
+using System.Reactive.Linq;
+
+using NUnit.Framework;
 
 namespace UniRx.Tests
 {
-    
-    public class ErrorHandlingTest
+
+	public class ErrorHandlingTest
     {
         [Test]
         public void Finally()

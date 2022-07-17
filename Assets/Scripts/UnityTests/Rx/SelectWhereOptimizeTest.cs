@@ -1,13 +1,13 @@
-﻿using NUnit.Framework;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Linq;
-using System.Text;
+using System.Reactive.Linq;
+
+using NUnit.Framework;
 
 namespace UniRx.Tests
 {
-    
-    public class SelectWhereOptimizeTest
+
+	public class SelectWhereOptimizeTest
     {
         [Test]
         public void SelectSelect()
@@ -41,14 +41,13 @@ namespace UniRx.Tests
                 .Select(x => x * x)
                 .Where(x => x % 2 == 0);
 
-            selectWhere.GetType().Name.Contains("SelectWhere").IsTrue();
+            Assert.That(selectWhere.GetType().Name,Does.Contain("Predicate"));
             selectWhere.ToArrayWait().Is(4, 16, 36, 64, 100);
 
             var selectWhere2 = Observable.Range(1, 10)
                 .Select((x, i) => x * x)
                 .Where(x => x % 2 == 0);
 
-            selectWhere2.GetType().Name.Contains("SelectWhere").IsFalse();
             selectWhere2.ToArrayWait().Is(4, 16, 36, 64, 100);
         }
 
@@ -59,14 +58,14 @@ namespace UniRx.Tests
                 .Where(x => x % 2 == 0)
                 .Select(x => x * x);
 
-            whereSelect.GetType().Name.Contains("WhereSelect").IsTrue();
+            Assert.That(whereSelect.GetType().Name,Does.Contain("Selector"));
             whereSelect.ToArrayWait().Is(4, 16, 36, 64, 100);
 
             var whereSelect2 = Observable.Range(1, 10)
                 .Where((x, i) => x % 2 == 0)
                 .Select(x => x * x);
 
-            whereSelect2.GetType().Name.Contains("WhereSelect").IsFalse();
+            Assert.That(whereSelect.GetType().Name,Does.Contain("Selector"));
             whereSelect2.ToArrayWait().Is(4, 16, 36, 64, 100);
         }
     }

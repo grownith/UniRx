@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Reactive;
+using System.Reactive.Linq;
 using System.Threading;
 using UniRx.InternalUtil;
 
@@ -393,42 +395,17 @@ namespace UniRx
     {
         public static IObserver<T> Synchronize<T>(this IObserver<T> observer)
         {
-            return new UniRx.Operators.SynchronizedObserver<T>(observer, new object());
+            return new SynchronizedObserver<T>(observer, new object());
         }
 
         public static IObserver<T> Synchronize<T>(this IObserver<T> observer, object gate)
         {
-            return new UniRx.Operators.SynchronizedObserver<T>(observer, gate);
+            return new SynchronizedObserver<T>(observer, gate);
         }
     }
 
     public static partial class ObservableExtensions
     {
-        public static IDisposable Subscribe<T>(this IObservable<T> source)
-        {
-            return source.Subscribe(UniRx.InternalUtil.ThrowObserver<T>.Instance);
-        }
-
-        public static IDisposable Subscribe<T>(this IObservable<T> source, Action<T> onNext)
-        {
-            return source.Subscribe(Observer.CreateSubscribeObserver(onNext, Stubs.Throw, Stubs.Nop));
-        }
-
-        public static IDisposable Subscribe<T>(this IObservable<T> source, Action<T> onNext, Action<Exception> onError)
-        {
-            return source.Subscribe(Observer.CreateSubscribeObserver(onNext, onError, Stubs.Nop));
-        }
-
-        public static IDisposable Subscribe<T>(this IObservable<T> source, Action<T> onNext, Action onCompleted)
-        {
-            return source.Subscribe(Observer.CreateSubscribeObserver(onNext, Stubs.Throw, onCompleted));
-        }
-
-        public static IDisposable Subscribe<T>(this IObservable<T> source, Action<T> onNext, Action<Exception> onError, Action onCompleted)
-        {
-            return source.Subscribe(Observer.CreateSubscribeObserver(onNext, onError, onCompleted));
-        }
-
         public static IDisposable SubscribeWithState<T, TState>(this IObservable<T> source, TState state, Action<T, TState> onNext)
         {
             return source.Subscribe(Observer.CreateSubscribeWithStateObserver(state, onNext, Stubs<TState>.Throw, Stubs<TState>.Ignore));

@@ -1,10 +1,12 @@
 ﻿using System;
-using NUnit.Framework;
 using System.Collections.Generic;
+using System.Reactive.Concurrency;
+
+using NUnit.Framework;
 
 namespace UniRx.Tests
 {
-    
+
     public class SchedulerTest
     {
         private static string[] ScheduleTasks(IScheduler scheduler)

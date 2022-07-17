@@ -1,12 +1,13 @@
 ﻿using System;
+using System.Reactive;
+using System.Reactive.Linq;
+
 using NUnit.Framework;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace UniRx.Tests
 {
-    
-    public class ObservableEventsTest
+
+	public class ObservableEventsTest
     {
         class EventTestesr
         {

@@ -3,11 +3,14 @@
 #endif
 
 using System;
-using System.Collections.Generic;
 using System.Threading;
+using System.Collections.Generic;
+using System.Reactive.Disposables;
+
 using UniRx.InternalUtil;
 #if !UniRxLibrary
 using UnityEngine;
+using System.Reactive.Linq;
 #endif
 #if CSHARP_7_OR_LATER || (UNITY_2018_3_OR_NEWER && (NET_STANDARD_2_0 || NET_4_6))
 using System.Threading.Tasks;
@@ -328,22 +331,10 @@ namespace UniRx
                 return Disposable.Empty;
             }
 
-            if (isSourceCompleted)
-            {
-                if (canPublishValueOnSubscribe)
-                {
-                    observer.OnNext(latestValue);
-                    observer.OnCompleted();
-                    return Disposable.Empty;
-                }
-                else
-                {
-                    observer.OnCompleted();
-                    return Disposable.Empty;
-                }
-            }
+            if (isSourceCompleted && canPublishValueOnSubscribe)
+                observer.OnNext(latestValue);
 
-            if (isDisposed)
+            if (isSourceCompleted || isDisposed)
             {
                 observer.OnCompleted();
                 return Disposable.Empty;

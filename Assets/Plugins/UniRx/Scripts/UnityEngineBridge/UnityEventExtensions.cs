@@ -2,8 +2,9 @@
 #if !(UNITY_4_0 || UNITY_4_1 || UNITY_4_2 || UNITY_4_3 || UNITY_4_4 || UNITY_4_5)
 
 using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Reactive;
+using System.Reactive.Linq;
+
 using UnityEngine.Events;
 
 namespace UniRx
@@ -12,7 +13,7 @@ namespace UniRx
     {
         public static IObservable<Unit> AsObservable(this UnityEngine.Events.UnityEvent unityEvent)
         {
-            return Observable.FromEvent<UnityAction>(h => new UnityAction(h), h => unityEvent.AddListener(h), h => unityEvent.RemoveListener(h));
+            return Observable.FromEvent<UnityAction,Unit>((action) => new UnityAction(() => action(Unit.Default)),(h) => unityEvent.AddListener(h),(h) => unityEvent.RemoveListener(h));
         }
 
         public static IObservable<T> AsObservable<T>(this UnityEngine.Events.UnityEvent<T> unityEvent)
